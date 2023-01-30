@@ -4,6 +4,8 @@ import { Route, Routes } from "react-router-dom"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { Authorized } from "./views/Authorized"
+import { NavBar } from "./nav/NavBar"
+import { ApplicationViews } from "./views/ApplicationViews"
 
 export const FauxLotto = () => {
     return (
@@ -14,11 +16,10 @@ export const FauxLotto = () => {
             <Route path="*" element={
                 <Authorized>
                     <>
-                        {/* <NavBar />
-                        <ApplicationViews /> */}
+                        <NavBar />
+                        <ApplicationViews />
                     </>
                 </Authorized>
-                
             } />
 	    </Routes>
     )
