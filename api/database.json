@@ -1,0 +1,103 @@
+{
+    "players": [
+        {
+            "id": 1,
+            "name": "John Smith",
+            "email": "yesthatsreallymyname@coldmail.com",
+            "currency": 500,
+            "wins": 3,
+            "losses": 15
+        },
+        {
+            "id": 2,
+            "name": "Jane Doe",
+            "email": "mysterywoman@coldmail.com",
+            "currency": 1000,
+            "wins": 10,
+            "losses": 5
+        },
+        {
+            "id": 3,
+            "name": "Alexander Grate",
+            "email": "sewagesuckersincorporated@coldmail.com",
+            "currency": 20000,
+            "wins": 40,
+            "losses": 30
+        },
+        {
+            "id": 4,
+            "name": "Hal Morgan",
+            "email": "halmorainemorgan@coldmail.com",
+            "currency": 15000,
+            "wins": 5,
+            "losses": 20
+        },
+        {
+            "id": 5,
+            "name": "Kelly Manch",
+            "email": "kmanch@coldmail.com",
+            "currency": 200,
+            "wins": 2,
+            "losses": 1
+        }
+    ],
+    "horses": [
+        {
+            "id": 1,
+            "name": "Black Betsy",
+            "breed": "Friesian",
+            "chances": 0.50
+        },
+        {
+            "id": 2,
+            "name": "Eeyore",
+            "breed": "Mule",
+            "chances": 0.05
+        },
+        {
+            "id": 3,
+            "name": "Big Jim",
+            "breed": "Thoroughbred",
+            "chances": 0.15
+        },
+        {
+            "id": 4,
+            "name": "Colt",
+            "breed": "Mustang",
+            "chances": 0.3
+        }
+    ],
+    "coinGames": [
+        {
+            "id": 1,
+            "playerId": 1,
+            "amountBet": 50,
+            "win": false,
+            "date": "1/29/23"
+        },
+        {
+            "id": 2,
+            "playerId": 3,
+            "amountBet": 1000,
+            "win": true,
+            "date": "1/30/23"
+        },
+        {
+            "id": 3,
+            "playerId": 2,
+            "amountBet": 500,
+            "win": false,
+            "date": "1/30/23"
+        }
+    ],
+    "horseGames": [
+        {
+            "id": 1,
+            "playerId": 1,
+            "horseId": 1,
+            "amountBet": 50,
+            "win": false,
+            "date": "1/29/23"
+        }
+    ]
+}
