@@ -76,6 +76,7 @@
       "id": 1,
       "playerId": 1,
       "amountBet": 50,
+      "choice": "Heads",
       "win": false,
       "date": "1/29/23"
     },
@@ -83,6 +84,7 @@
       "id": 2,
       "playerId": 3,
       "amountBet": 1000,
+      "choice": "Heads",
       "win": true,
       "date": "1/30/23"
     },
@@ -90,6 +92,7 @@
       "id": 3,
       "playerId": 2,
       "amountBet": 500,
+      "choice": "Tails",
       "win": false,
       "date": "1/30/23"
     }
