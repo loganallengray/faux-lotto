@@ -1,27 +1,24 @@
 import { useEffect, useState } from "react";
-import { CoinGame } from "./CoinGame";
-import { HorseGame } from "./HorseGame";
+import { CoinGameList } from "./CoinGameList";
+import { HorseGameList } from "./HorseGameList";
 
-export const Profile = () => {
+export const Profile = ({playerUser}) => {
     const [player, setPlayer] = useState({})
     const [coinGames, setCoinGames] = useState([])
     const [horseGames, setHorseGames] = useState([])
 
-    const localLottoUser = localStorage.getItem("lotto_user")
-    const lottoUserObject = JSON.parse(localLottoUser)
-
     useEffect(() => {
-        fetch(`http://localhost:8088/players?id=${lottoUserObject.id}`)
+        fetch(`http://localhost:8088/players?id=${playerUser.id}`)
             .then((res) => res.json())
             .then((data) => {
                 setPlayer(data[0])
             })
-        fetch(`http://localhost:8088/coinGames?playerId=${lottoUserObject.id}`)
+        fetch(`http://localhost:8088/coinGames?playerId=${playerUser.id}`)
             .then((res) => res.json())
             .then((data) => {
                 setCoinGames(data)
             })
-        fetch(`http://localhost:8088/horseGames?playerId=${lottoUserObject.id}&_expand=horse`)
+        fetch(`http://localhost:8088/horseGames?playerId=${playerUser.id}&_expand=horse`)
             .then((res) => res.json())
             .then((data) => {
                 setHorseGames(data)
@@ -43,13 +40,13 @@ export const Profile = () => {
                 <article>
                     <h3>Coin Games</h3>
                     <ul>
-                        {coinGames.map((coinGame) => <CoinGame coinGame={coinGame} />)}
+                        {coinGames.map((coinGame) => <CoinGameList coinGame={coinGame} setCoinGames={setCoinGames} key={coinGame.id} />)}
                     </ul>
                 </article>
                 <article>
                     <h3>Horse Races</h3>
                     <ul>
-                        {horseGames.map((horseGame) => <HorseGame horseGame={horseGame} />)}
+                        {horseGames.map((horseGame) => <HorseGameList horseGame={horseGame} setHorseGames={setHorseGames} key={horseGame.id} />)}
                     </ul>
                 </article>
             </section>
