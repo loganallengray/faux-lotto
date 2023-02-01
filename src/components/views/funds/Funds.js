@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react";
 
-export const Funds = () => {
+export const Funds = ({playerUser}) => {
     const [player, setPlayer] = useState({})
     const [userChoices, setUserChoices] = useState({
         newFunds: 0,
         subtract: false
     })
 
-    const localLottoUser = localStorage.getItem("lotto_user")
-    const lottoUserObject = JSON.parse(localLottoUser)
-
     useEffect(() => {
-        fetch(`http://localhost:8088/players?id=${lottoUserObject.id}`)
+        fetch(`http://localhost:8088/players?id=${playerUser.id}`)
             .then((res) => res.json())
             .then((data) => {
                 setPlayer(data[0])
@@ -46,7 +43,7 @@ export const Funds = () => {
                 body: JSON.stringify(playerToSend),
             })
                 .then(() => {
-                    fetch(`http://localhost:8088/players?id=${lottoUserObject.id}`)
+                    fetch(`http://localhost:8088/players?id=${playerUser.id}`)
                         .then((res) => res.json())
                         .then((data) => {
                             setPlayer(data[0])
