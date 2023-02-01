@@ -6,7 +6,7 @@ export const Games = () => {
             <h2>Game List</h2>
             <section>
                 <article>
-                    <Link to=""><h3>Coin Flip</h3></Link>
+                    <Link to="/coingame"><h3>Coin Flip</h3></Link>
                     <p>Call the correct side and you double your money!</p>
                 </article>
                 <article>
