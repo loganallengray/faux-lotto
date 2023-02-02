@@ -18,7 +18,6 @@ export const CoinGame = ({player, setPlayer}) => {
         if (userChoices.amountBet !== 0 && userChoices.amountBet <= player.currency && userChoices.call !== 0 
             || userChoices.betAll === true && userChoices.call !== 0) {
             const result = CoinGameLogic(userChoices.call)
-            setResults(result)
 
             const playerToEdit = {...player}
             
@@ -28,7 +27,7 @@ export const CoinGame = ({player, setPlayer}) => {
                 choice: result.choice,
                 outcome: result.flip,
                 win: result.win,
-                date: new Date()
+                date: new Date().toLocaleDateString()
             }
             
             // if bet all is selected, set amount bet to all of the player's currency
@@ -65,7 +64,8 @@ export const CoinGame = ({player, setPlayer}) => {
                 body: JSON.stringify(gameToSend),
             })
                 .then((res) => res.json())
-                .then((data) => setShowResults(true))
+                .then((data) => setResults(data))
+                .then(() => setShowResults(true))
         }
     }
 
