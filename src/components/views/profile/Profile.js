@@ -2,23 +2,17 @@ import { useEffect, useState } from "react";
 import { CoinGameList } from "./CoinGameList";
 import { HorseGameList } from "./HorseGameList";
 
-export const Profile = ({playerUser}) => {
-    const [player, setPlayer] = useState({})
+export const Profile = ({player, playerId}) => {
     const [coinGames, setCoinGames] = useState([])
     const [horseGames, setHorseGames] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:8088/players?id=${playerUser.id}`)
-            .then((res) => res.json())
-            .then((data) => {
-                setPlayer(data[0])
-            })
-        fetch(`http://localhost:8088/coinGames?playerId=${playerUser.id}`)
+        fetch(`http://localhost:8088/coinGames?playerId=${playerId}`)
             .then((res) => res.json())
             .then((data) => {
                 setCoinGames(data)
             })
-        fetch(`http://localhost:8088/horseGames?playerId=${playerUser.id}&_expand=horse`)
+        fetch(`http://localhost:8088/horseGames?playerId=${playerId}&_expand=horse`)
             .then((res) => res.json())
             .then((data) => {
                 setHorseGames(data)
