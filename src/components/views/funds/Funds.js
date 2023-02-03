@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export const Funds = ({player, setPlayer}) => {
     const [userChoices, setUserChoices] = useState({
@@ -6,12 +6,19 @@ export const Funds = ({player, setPlayer}) => {
         subtract: false
     })
 
+    /* 
+        Send a player with updated currency property to the API with a fetch PUT
+        refetch the player data to be updated on the page
+        reset user choices
+    */
+
     const handleSubmit = (event) => {
         event.preventDefault()
 
         if (userChoices.newFunds !== 0) {
             let newFunds = userChoices.newFunds;
 
+            // Sets amount to negative if subtract is selected
             if(userChoices.subtract) {
                 newFunds *= -1
             }
@@ -38,10 +45,7 @@ export const Funds = ({player, setPlayer}) => {
                         .then((res) => res.json())
                         .then((data) => {
                             setPlayer(data[0])
-                            setUserChoices({
-                                newFunds: 0,
-                                subtract: false
-                            })
+                            setUserChoices({})
                         })
                 })
         }
@@ -50,7 +54,7 @@ export const Funds = ({player, setPlayer}) => {
     return (
         <>
             <h2>Funds</h2>
-            <div>Current Funds: ${player.currency}</div>
+            <div>Current Funds: ${parseFloat(player.currency).toFixed(2)}</div>
             <form>
                 <fieldset>
                     <label>Add/Subtract Funds</label>
@@ -61,7 +65,7 @@ export const Funds = ({player, setPlayer}) => {
                         value={userChoices.newFunds}
                         onChange={(event) => {
                             const copy = {...userChoices}
-                            copy.newFunds = parseInt(event.target.value)
+                            copy.newFunds = parseFloat(event.target.value)
                             setUserChoices(copy)
                         }} />
                 </fieldset>

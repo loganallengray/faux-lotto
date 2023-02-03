@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import { Route, Routes } from "react-router-dom"
 import { Funds } from "./funds/Funds"
-import { CoinGame } from "./games/CoinGame"
+import { CoinGame } from "./games/coingame/CoinGame"
 import { Games } from "./games/Games"
+import { HorseGame } from "./games/horsegame/HorseGame"
 import { Profile } from "./profile/Profile"
 
 export const ApplicationViews = () => {
@@ -23,6 +24,7 @@ export const ApplicationViews = () => {
         <Routes>
             <Route path="games" element={ <Games /> } />
             <Route path="coingame" element={<CoinGame player={player} setPlayer={setPlayer} />} />
+            <Route path="horsegame" element={<HorseGame player={player} setPlayer={setPlayer} />} />
             <Route path="funds" element={ <Funds player={player} setPlayer={setPlayer} /> } />
             <Route path="profile" element={ <Profile player={player} playerId={lottoUserObject.id} /> } />
         </Routes>

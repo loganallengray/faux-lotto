@@ -15,14 +15,14 @@ export const CoinGameList = ({coinGame, setCoinGames}) => {
     return (coinGame.win ? (
         <li key={coinGame.id}>
             <h4>Win - {coinGame.choice}</h4>
-            <div>Amount Gained: ${coinGame.amountBet}</div>
+            <div>Amount Gained: ${parseFloat(coinGame.amountBet).toFixed(2)}</div>
             <div>{coinGame.date}</div>
             <button onClick={(event) => handleDelete(event)}>Delete</button>
         </li>
     ) : (
         <li key={coinGame.id}>
             <h4>Loss - {coinGame.choice}</h4>
-            <div>Amount Lost: ${coinGame.amountBet}</div>
+            <div>Amount Lost: ${parseFloat(coinGame.amountBet).toFixed(2)}</div>
             <div>{coinGame.date}</div>
             <button onClick={(event) => handleDelete(event)}>Delete</button>
         </li>

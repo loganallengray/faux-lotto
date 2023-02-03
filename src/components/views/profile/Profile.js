@@ -25,7 +25,7 @@ export const Profile = ({player, playerId}) => {
             <section>
                 <h3>Player Stats</h3>
                 <ul>
-                    <div>Total Currency: ${player.currency}</div>
+                    <div>Total Currency: ${parseFloat(player.currency).toFixed(2)}</div>
                     <div>Total Wins: {player.wins}</div>
                     <div>Total Losses: {player.losses}</div>
                 </ul>
