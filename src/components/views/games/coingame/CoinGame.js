@@ -92,7 +92,7 @@ export const CoinGame = ({player, setPlayer}) => {
                     >Tails</button>
                 </fieldset>
                 <fieldset>
-                    <div>Current Currency: ${player.currency}</div>
+                    <div>Current Currency: ${parseFloat(player.currency).toFixed(2)}</div>
                     <label>Bet Amount</label>
                     <input 
                         type="number" 
@@ -102,7 +102,7 @@ export const CoinGame = ({player, setPlayer}) => {
                         value={userChoices.amountBet}
                         onChange={(event) => {
                             const copy = {...userChoices}
-                            copy.amountBet = parseInt(event.target.value)
+                            copy.amountBet = parseFloat(event.target.value)
                             setUserChoices(copy)
                     }} />
                 </fieldset>
