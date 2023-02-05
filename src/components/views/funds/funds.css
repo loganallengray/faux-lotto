@@ -1,0 +1,22 @@
+#fund-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#fund-header {
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+    width: 60%;
+}
+
+#funds-input {
+    margin-top: 10px;
+    min-width: 300px;
+    width: 60%;
+}
+
+#fund-submit {
+    min-width: 80px;
+    width: 30%;
+}

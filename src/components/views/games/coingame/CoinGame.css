@@ -1,0 +1,38 @@
+#coin-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#coin--display {
+    margin-bottom: 15px;
+}
+
+#coin-choice {
+    display: flex;
+    justify-content: space-between;
+    margin: -15px -15px -15px 0;
+    min-width: 100px;
+    width: 15%;
+}
+
+#currency-amount {
+    margin: 0 0 10px 0;
+}
+
+#coin-amount-header {
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+    width: 60%;
+}
+
+#coins-amount-input {
+    margin-top: 10px;
+    min-width: 300px;
+    width: 60%;
+}
+
+#coin-submit {
+    min-width: 80px;
+    width: 30%;
+}

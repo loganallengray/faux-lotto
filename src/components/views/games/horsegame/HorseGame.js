@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { HorseDisplay } from "./HorseDisplay"
 import { HorseGameDisplay } from "./HorseGameDisplay"
 import { HorseGameLogic } from "./HorseGameLogic"
+import "./HorseGame.css"
 
 export const HorseGame = ({player, setPlayer}) => {
     const [horses, setHorses] = useState([])
@@ -99,55 +100,62 @@ export const HorseGame = ({player, setPlayer}) => {
 
     return (
         <>
-            <HorseGameDisplay results={results} showResults={showResults} />
-            <form>
-                <fieldset>
-                    <select
-                        onChange={(event) => {
-                            const copy = {...userChoices}
-                            copy.horseId = parseInt(event.target.value)
-                            setUserChoices(copy)
-                        }}
-                    >
-                        <option value="0">Choose a horse...</option>
-                        {horses.map(horse => (
-                            <option key={horse.id} value={horse.id}>{horse.name}</option>
-                        ))}
-                    </select>
+            <h2>Horse Race</h2>
+            <main id="main-content">
+                <HorseGameDisplay results={results} showResults={showResults} />
+                <form id="horse-form">
+                    <fieldset id="horse-choice">
+                        <select
+                            onChange={(event) => {
+                                const copy = {...userChoices}
+                                copy.horseId = parseInt(event.target.value)
+                                setUserChoices(copy)
+                            }}
+                        >
+                            <option value="0">Choose a horse...</option>
+                            {horses.map(horse => (
+                                <option key={horse.id} value={horse.id}>{horse.name}</option>
+                            ))}
+                        </select>
+                    </fieldset>
                     <HorseDisplay horse={chosenHorse} showHorse={showChosenHorse} />
-                </fieldset>
-                <fieldset>
-                    <div>Current Currency: ${parseFloat(player.currency).toFixed(2)}</div>
-                    <label>Bet Amount</label>
-                    <input 
-                        type="number" 
-                        placeholder="Set amount here..."
-                        min="0" 
-                        max={player.currency}
-                        value={userChoices.amountBet}
-                        onChange={(event) => {
-                            const copy = {...userChoices}
-                            copy.amountBet = parseFloat(event.target.value)
-                            setUserChoices(copy)
-                    }} />
-                </fieldset>
-                <fieldset>
-                    <input 
-                        type="checkbox" 
-                        checked={userChoices.subtract}
-                        onChange={(event) => {
-                            const copy = {...userChoices}
-                            copy.betAll = event.target.checked
-                            setUserChoices(copy)
-                        }} />
-                    <label>Bet all?</label>
-                </fieldset>
-                <button 
-                    onClick={(event) => {
-                        handleRace(event)
-                    }}
-                >Start Race</button>
-            </form>
+                    <fieldset id="horse-amount">
+                        <div id="currency-amount">Current Currency: ${parseFloat(player.currency).toFixed(2)}</div>
+                        <div id="horse-amount-header">
+                            <label>Bet Amount</label>
+                                <div>
+                                    <label>Bet all?</label>
+                                    <input 
+                                        type="checkbox" 
+                                        checked={userChoices.subtract}
+                                        onChange={(event) => {
+                                            const copy = {...userChoices}
+                                            copy.betAll = event.target.checked
+                                            setUserChoices(copy)
+                                        }} />
+                                </div>
+                        </div>
+                        <input 
+                            id="horse-amount-input"
+                            type="number" 
+                            placeholder="Set amount here..."
+                            min="0" 
+                            max={player.currency}
+                            value={userChoices.amountBet}
+                            onChange={(event) => {
+                                const copy = {...userChoices}
+                                copy.amountBet = parseFloat(event.target.value)
+                                setUserChoices(copy)
+                            }} />
+                    </fieldset>
+                    <button 
+                        id="horse-submit"
+                        onClick={(event) => {
+                            handleRace(event)
+                        }}
+                    >Start Race</button>
+                </form>
+            </main>
         </>
     )
 }

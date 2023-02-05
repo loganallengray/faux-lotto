@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./funds.css"
 
 export const Funds = ({player, setPlayer}) => {
     const [userChoices, setUserChoices] = useState({
@@ -54,38 +55,45 @@ export const Funds = ({player, setPlayer}) => {
     return (
         <>
             <h2>Funds</h2>
-            <div>Current Funds: ${parseFloat(player.currency).toFixed(2)}</div>
-            <form>
-                <fieldset>
-                    <label>Add/Subtract Funds</label>
-                    <input 
-                        type="number" 
-                        placeholder="Set amount here..."
-                        min="0" 
-                        value={userChoices.newFunds}
-                        onChange={(event) => {
-                            const copy = {...userChoices}
-                            copy.newFunds = parseFloat(event.target.value)
-                            setUserChoices(copy)
-                        }} />
-                </fieldset>
-                <fieldset>
-                    <input 
-                        type="checkbox" 
-                        checked={userChoices.subtract}
-                        onChange={(event) => {
-                            const copy = {...userChoices}
-                            copy.subtract = event.target.checked
-                            setUserChoices(copy)
-                        }} />
-                    <label>Subtract?</label>
+            <main id="main-content">
+                <div>Current Funds: ${parseFloat(player.currency).toFixed(2)}</div>
+                <form id="fund-form">
+                    <fieldset id="fund-amount">
+                        <div id="fund-header">
+                            <label id="fund-header-text">Add/Subtract Funds</label>
+                            <div id="fund-subtract">
+                                <label>Subtract?</label>
+                                <input 
+                                    id="subtract-input"
+                                    type="checkbox" 
+                                    checked={userChoices.subtract}
+                                    onChange={(event) => {
+                                        const copy = {...userChoices}
+                                        copy.subtract = event.target.checked
+                                        setUserChoices(copy)
+                                    }} />
+                            </div>
+                        </div>
+                        <input 
+                            id="funds-input"
+                            type="number" 
+                            placeholder="Set amount here..."
+                            min="0" 
+                            value={userChoices.newFunds}
+                            onChange={(event) => {
+                                const copy = {...userChoices}
+                                copy.newFunds = parseFloat(event.target.value)
+                                setUserChoices(copy)
+                            }} />
+                    </fieldset>
                     <button 
+                        id="fund-submit"
                         onClick={(event) => {
                             handleSubmit(event)
                         }}
                     >Submit Order</button>
-                </fieldset>
-            </form>
+                </form>
+            </main>
         </>
     )
 }

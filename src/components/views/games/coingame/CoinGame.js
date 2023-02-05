@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { CoinGameDisplay } from "./CoinGameDisplay"
 import { CoinGameLogic } from "./CoinGameLogic"
+import "./CoinGame.css"
 
 export const CoinGame = ({player, setPlayer}) => {
     const [userChoices, setUserChoices] = useState({
@@ -71,58 +72,65 @@ export const CoinGame = ({player, setPlayer}) => {
 
     return (
         <>
-            <CoinGameDisplay results={results} showResults={showResults} />
-            <form>
-                <fieldset>
-                    <button
-                        onClick={(event) => {
-                            event.preventDefault()
-                            const copy = {...userChoices}
-                            copy.call = true
-                            setUserChoices(copy)
-                    }}
-                    >Heads</button>
-                    <button
-                        onClick={(event) => {
-                            event.preventDefault()
-                            const copy = {...userChoices}
-                            copy.call = false
-                            setUserChoices(copy)
-                    }}
-                    >Tails</button>
-                </fieldset>
-                <fieldset>
-                    <div>Current Currency: ${parseFloat(player.currency).toFixed(2)}</div>
-                    <label>Bet Amount</label>
-                    <input 
-                        type="number" 
-                        placeholder="Set amount here..."
-                        min="0" 
-                        max={player.currency}
-                        value={userChoices.amountBet}
-                        onChange={(event) => {
-                            const copy = {...userChoices}
-                            copy.amountBet = parseFloat(event.target.value)
-                            setUserChoices(copy)
-                    }} />
-                </fieldset>
-                <fieldset>
-                    <input 
-                        type="checkbox" 
-                        checked={userChoices.subtract}
-                        onChange={(event) => {
-                            const copy = {...userChoices}
-                            copy.betAll = event.target.checked
-                            setUserChoices(copy)
+            <h2>Coin Game</h2>
+            <main id="main-content">
+                <CoinGameDisplay results={results} showResults={showResults} />
+                <form id="coin-form">
+                    <fieldset id="coin-choice">
+                        <button
+                            onClick={(event) => {
+                                event.preventDefault()
+                                const copy = {...userChoices}
+                                copy.call = true
+                                setUserChoices(copy)
+                        }}
+                        >Heads</button>
+                        <button
+                            onClick={(event) => {
+                                event.preventDefault()
+                                const copy = {...userChoices}
+                                copy.call = false
+                                setUserChoices(copy)
+                        }}
+                        >Tails</button>
+                    </fieldset>
+                    <fieldset id="coin-amount">
+                        <div id="currency-amount">Current Currency: ${parseFloat(player.currency).toFixed(2)}</div>
+                        <div id="coin-amount-header">
+                            <label>Bet Amount</label>
+                            <div>
+                                <label>Bet all?</label>
+                                <input 
+                                    type="checkbox" 
+                                    checked={userChoices.subtract}
+                                    onChange={(event) => {
+                                        const copy = {...userChoices}
+                                        copy.betAll = event.target.checked
+                                        setUserChoices(copy)
+                                    }} />
+                            </div>
+                        </div>
+                        <input 
+                            id="coins-amount-input"
+                            type="number" 
+                            placeholder="Set amount here..."
+                            min="0" 
+                            max={player.currency}
+                            value={userChoices.amountBet}
+                            onChange={(event) => {
+                                const copy = {...userChoices}
+                                copy.amountBet = parseFloat(event.target.value)
+                                setUserChoices(copy)
                         }} />
-                    <label>Bet all?</label>
-                </fieldset>
-                <button 
-                    onClick={(event) => {
-                        handleFlip(event)
-                    }}
-                >Flip Coin</button>
-            </form>
+                    </fieldset>
+                    <button 
+                        id="coin-submit"
+                        onClick={(event) => {
+                            handleFlip(event)
+                        }}
+                    >Flip Coin</button>
+                </form>
+            </main>
         </>
     )
 }
