@@ -6,6 +6,7 @@ import { Register } from "./auth/Register"
 import { Authorized } from "./views/Authorized"
 import { NavBar } from "./nav/NavBar"
 import { ApplicationViews } from "./views/ApplicationViews"
+import "./FauxLotto.css"
 
 export const FauxLotto = () => {
     return (

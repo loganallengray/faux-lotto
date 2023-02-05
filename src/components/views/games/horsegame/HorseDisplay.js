@@ -1,7 +1,7 @@
 export const HorseDisplay = ({horse, showHorse}) => {
     if (showHorse) {
         return (
-            <>
+            <div id="horse--display">
                 <h3>{horse.name}</h3>
                 <div>
                     <div>{horse.breed}</div>
@@ -10,7 +10,7 @@ export const HorseDisplay = ({horse, showHorse}) => {
                         <div>Betting odds: {horse.odds}</div>
                     </div>
                 </div>
-            </>
+            </div>
         )
     } else {
         return ""

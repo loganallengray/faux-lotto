@@ -3,9 +3,9 @@
     {
       "name": "John Smith",
       "email": "yesthatsreallymyname@coldmail.com",
-      "currency": 500,
-      "wins": 4,
-      "losses": 16,
+      "currency": 309.33333333333326,
+      "wins": 25,
+      "losses": 38,
       "id": 1
     },
     {
@@ -73,15 +73,6 @@
   ],
   "coinGames": [
     {
-      "id": 1,
-      "playerId": 1,
-      "amountBet": 50,
-      "choice": "Heads",
-      "outcome": "Tails",
-      "win": false,
-      "date": "1/29/2023"
-    },
-    {
       "id": 2,
       "playerId": 3,
       "amountBet": 1000,
@@ -101,23 +92,32 @@
     },
     {
       "playerId": 1,
-      "amountBet": 50,
-      "choice": "Tails",
+      "amountBet": 250,
+      "choice": "Heads",
       "outcome": "Heads",
-      "win": false,
-      "date": "2/2/2023",
-      "id": 4
+      "win": true,
+      "date": "2/3/2023",
+      "id": 6
     }
   ],
   "horseGames": [
     {
-      "id": 1,
       "playerId": 1,
-      "horseId": 1,
-      "amountBet": 50,
+      "horseId": 2,
+      "amountBet": 1333.3333333333333,
       "newAmount": 0,
       "win": false,
-      "date": "1/29/2023"
+      "date": "2/3/2023",
+      "id": 3
+    },
+    {
+      "playerId": 1,
+      "horseId": 3,
+      "amountBet": 2,
+      "newAmount": 6,
+      "win": true,
+      "date": "2/3/2023",
+      "id": 6
     }
   ]
 }

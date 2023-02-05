@@ -1,0 +1,38 @@
+#horse-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#horse-game--display {
+    margin-bottom: 15px;
+}
+
+#horse-choice {
+    display: flex;
+    justify-content: space-between;
+    margin: -15px -15px -15px 0;
+    min-width: 100px;
+    width: 15%;
+}
+
+#currency-amount {
+    margin: 0 0 10px 0;
+}
+
+#horse-amount-header {
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+    width: 60%;
+}
+
+#horse-amount-input {
+    margin-top: 10px;
+    min-width: 300px;
+    width: 60%;
+}
+
+#horse-submit {
+    min-width: 80px;
+    width: 30%;
+}
