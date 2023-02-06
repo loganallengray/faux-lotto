@@ -34,7 +34,7 @@ export const Register = (props) => {
 
     const handleRegister = (e) => {
         e.preventDefault()
-        return fetch(`http://localhost:8088/users?email=${player.email}`)
+        return fetch(`http://localhost:8088/players?email=${player.email}`)
             .then(res => res.json())
             .then(response => {
                 if (response.length > 0) {
@@ -59,9 +59,9 @@ export const Register = (props) => {
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for Faux Lotto</h1>
                 <fieldset>
-                    <label htmlFor="fullName"> Full Name </label>
+                    <label htmlFor="name"> Full Name </label>
                     <input onChange={updatePlayer}
-                           type="text" id="fullName" className="form-control"
+                           type="text" id="name" className="form-control"
                            placeholder="Enter your name" required autoFocus />
                 </fieldset>
                 <fieldset>

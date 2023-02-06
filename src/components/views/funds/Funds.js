@@ -3,7 +3,7 @@ import "./funds.css"
 
 export const Funds = ({player, setPlayer}) => {
     const [userChoices, setUserChoices] = useState({
-        newFunds: 0,
+        newFunds: false,
         subtract: false
     })
 
@@ -16,7 +16,7 @@ export const Funds = ({player, setPlayer}) => {
     const handleSubmit = (event) => {
         event.preventDefault()
 
-        if (userChoices.newFunds !== 0) {
+        if (userChoices.newFunds && userChoices.newFunds !== 0) {
             let newFunds = userChoices.newFunds;
 
             // Sets amount to negative if subtract is selected
@@ -24,7 +24,7 @@ export const Funds = ({player, setPlayer}) => {
                 newFunds *= -1
             }
 
-            const totalFunds = player.currency + newFunds;
+            const totalFunds = player.currency + parseFloat(newFunds);
 
             const playerToSend = {
                 name: player.name,
@@ -46,7 +46,6 @@ export const Funds = ({player, setPlayer}) => {
                         .then((res) => res.json())
                         .then((data) => {
                             setPlayer(data[0])
-                            setUserChoices({})
                         })
                 })
         }
@@ -82,7 +81,7 @@ export const Funds = ({player, setPlayer}) => {
                             value={userChoices.newFunds}
                             onChange={(event) => {
                                 const copy = {...userChoices}
-                                copy.newFunds = parseFloat(event.target.value)
+                                copy.newFunds = event.target.value
                                 setUserChoices(copy)
                             }} />
                     </fieldset>

@@ -7,6 +7,12 @@ export const NavBar = () => {
     return (
         <ul className="navbar">
             <li className="navbar__item active">
+                <div
+                    id="navbar__home"
+                    onClick={() => {navigate("/")}}
+                >Faux Lotto</div>
+            </li>
+            <li className="navbar__item active">
                 <Link className="navbar__link" to="/games">Games</Link>
             </li>
             <li className="navbar__item active">
