@@ -10,7 +10,7 @@ export const HorseGame = ({player, setPlayer}) => {
     const [showChosenHorse, setShowChosenHorse] = useState(false)
     const [userChoices, setUserChoices] = useState({
         horseId: 0,
-        amountBet: 0,
+        amountBet: false,
         betAll: false
     })
     const [results, setResults] = useState ({})
@@ -38,8 +38,8 @@ export const HorseGame = ({player, setPlayer}) => {
             event.preventDefault()
             
             // check if all user options are filled out correctly
-            if (userChoices.amountBet !== 0 && userChoices.amountBet <= player.currency && userChoices.call !== 0 
-                || userChoices.betAll === true && userChoices.call !== 0) {
+            if (parseFloat(userChoices.amountBet) !== 0 && parseFloat(userChoices.amountBet) <= player.currency && userChoices.horseId !== 0
+                || userChoices.betAll === true && userChoices.call !== 0 && player.currency !== 0) {
                     const result = HorseGameLogic(horses, chosenHorse)
                     
                     const playerToEdit = {...player}
@@ -47,7 +47,7 @@ export const HorseGame = ({player, setPlayer}) => {
                     const gameToSend = {
                         playerId: player.id,
                         horseId: chosenHorse.id,
-                        amountBet: userChoices.amountBet,
+                        amountBet: parseFloat(userChoices.amountBet),
                         newAmount: 0,
                         win: result.win,
                         date: new Date().toLocaleDateString()
@@ -144,7 +144,7 @@ export const HorseGame = ({player, setPlayer}) => {
                             value={userChoices.amountBet}
                             onChange={(event) => {
                                 const copy = {...userChoices}
-                                copy.amountBet = parseFloat(event.target.value)
+                                copy.amountBet = event.target.value
                                 setUserChoices(copy)
                             }} />
                     </fieldset>

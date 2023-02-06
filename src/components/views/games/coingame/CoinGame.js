@@ -6,7 +6,7 @@ import "./CoinGame.css"
 export const CoinGame = ({player, setPlayer}) => {
     const [userChoices, setUserChoices] = useState({
         call: 0,
-        amountBet: 0,
+        amountBet: false,
         betAll: false
     })
     const [results, setResults] = useState ({})
@@ -16,15 +16,15 @@ export const CoinGame = ({player, setPlayer}) => {
         event.preventDefault()
 
         // check if all user options are filled out correctly
-        if (userChoices.amountBet !== 0 && userChoices.amountBet <= player.currency && userChoices.call !== 0 
-            || userChoices.betAll === true && userChoices.call !== 0) {
+        if (userChoices.amountBet && parseFloat(userChoices.amountBet) !== 0 && parseFloat(userChoices.amountBet) <= player.currency && userChoices.call !== 0 
+            || userChoices.betAll === true && userChoices.call !== 0 && player.currency !== 0) {
             const result = CoinGameLogic(userChoices.call)
 
             const playerToEdit = {...player}
             
             const gameToSend = {
                 playerId: player.id,
-                amountBet: userChoices.amountBet,
+                amountBet: parseFloat(userChoices.amountBet),
                 choice: result.choice,
                 outcome: result.flip,
                 win: result.win,
@@ -119,7 +119,7 @@ export const CoinGame = ({player, setPlayer}) => {
                             value={userChoices.amountBet}
                             onChange={(event) => {
                                 const copy = {...userChoices}
-                                copy.amountBet = parseFloat(event.target.value)
+                                copy.amountBet = event.target.value
                                 setUserChoices(copy)
                         }} />
                     </fieldset>
