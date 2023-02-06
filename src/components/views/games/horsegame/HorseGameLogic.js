@@ -1,37 +1,47 @@
 /* 
-    Calculate total sum of weight (chances)
-    Get random number between 0 and total sum
-    Subtract 1 from random number repeatedly
-    Check if the Number is equal to any of the weights, map through horses and check (chances)
-    Have something to catch it if it chooses a number below the lowest weight
-    Return result object and horse object.
+    have two arrays, one with the horses, and another with the chances of the horse winning
+    the indexes of the two will match each other
+    make a function that will choose a random number and decide who wins
+    return a "result" object that has all information needed for the horse game page
 */
 
 export const HorseGameLogic = (horses, chosenHorse) => {
     const result = {}
 
-    const totalWeightSum = 100
-    const randomNum = Math.floor(Math.random() * totalWeightSum)
+    const items = []
+    const weights = []
 
-    for (let i = randomNum; i > 0; i--) {
-        for (const horse of horses) {
-            if (horse.chances === i) {
-                result.horse = horse
-                
-                if (horse.id === chosenHorse.id) {
-                    result.win = true
-                } else {
-                    result.win = false
-                }
+    for (const horse of horses) {
+        items.push(horse)
+        weights.push(horse.chances)
+    }
 
-                return result;
+    const findWinner = (items, weights) => {
+        // get the cumulative for each of the weights
+        const cumulativeWeights = [];
+        for (let i = 0; i < weights.length; i += 1) {
+            cumulativeWeights[i] = weights[i] + (cumulativeWeights[i - 1] || 0);
+        }
+    
+        // get total of the weight
+        const maxCumulativeWeight = cumulativeWeights[cumulativeWeights.length - 1];
+
+        // randomize to see who wins
+        const randomNumber = maxCumulativeWeight * Math.random();
+    
+        // find the first cumulative weight that is higher than the random number
+        for (let itemIndex = 0; itemIndex < items.length; itemIndex += 1) {
+            if (cumulativeWeights[itemIndex] >= randomNumber) {
+                // return the winning horse
+                return items[itemIndex]
             }
         }
     }
 
-    result.horse = horses[1]
+    const winner = findWinner(items, weights)
+    result.horse = winner
 
-    if (horses[1].id === chosenHorse.id) {
+    if (winner === chosenHorse) {
         result.win = true
     } else {
         result.win = false

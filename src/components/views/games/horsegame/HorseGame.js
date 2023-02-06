@@ -17,7 +17,7 @@ export const HorseGame = ({player, setPlayer}) => {
     const [showResults, setShowResults] = useState(false)
 
     useEffect(() => {
-        fetch(`http://localhost:8088/horses`)
+        fetch(`http://localhost:8088/horses?_sort=chances&_order=desc`)
             .then((res) => res.json())
             .then((data) => {
                 setHorses(data)
