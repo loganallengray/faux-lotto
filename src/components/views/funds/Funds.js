@@ -51,13 +51,49 @@ export const Funds = ({player, setPlayer}) => {
         }
     }
 
+    const handleReset = (event) => {
+        event.preventDefault()
+
+        const playerToSend = {
+            name: player.name,
+            email: player.email,
+            currency: 0,
+            wins: player.wins,
+            losses: player.losses
+        }
+
+        fetch(`http://localhost:8088/players/${player.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(playerToSend),
+        })
+            .then(() => {
+                fetch(`http://localhost:8088/players?id=${player.id}`)
+                    .then((res) => res.json())
+                    .then((data) => {
+                        setPlayer(data[0])
+                    })
+            })
+    }
+
     return (
         <>
             <h2>Funds</h2>
             <main id="main-content">
-                <div>Current Funds: ${parseFloat(player.currency).toFixed(2)}</div>
+                <div id="current-currency">
+                    <div id="funds-display">Current Funds: ${parseFloat(player.currency).toFixed(2)}</div>
+                    <button
+                        id="funds-reset"
+                        onClick={(event) => {
+                            handleReset(event)
+                        }}
+                    >Set Funds to Zero
+                    </button>
+                </div>
                 <form id="fund-form">
-                    <fieldset id="fund-amount">
+                    <fieldset id="fund-options">
                         <div id="fund-header">
                             <label id="fund-header-text">Add/Subtract Funds</label>
                             <div id="fund-subtract">
@@ -73,6 +109,8 @@ export const Funds = ({player, setPlayer}) => {
                                     }} />
                             </div>
                         </div>
+                    </fieldset>
+                    <fieldset id="fund-amount">
                         <input 
                             id="funds-input"
                             type="number" 
@@ -84,13 +122,13 @@ export const Funds = ({player, setPlayer}) => {
                                 copy.newFunds = event.target.value
                                 setUserChoices(copy)
                             }} />
+                        <button 
+                            id="fund-submit"
+                            onClick={(event) => {
+                                handleSubmit(event)
+                            }}
+                        >Submit Order</button>
                     </fieldset>
-                    <button 
-                        id="fund-submit"
-                        onClick={(event) => {
-                            handleSubmit(event)
-                        }}
-                    >Submit Order</button>
                 </form>
             </main>
         </>
