@@ -3,9 +3,9 @@
     {
       "name": "John Smith",
       "email": "yesthatsreallymyname@coldmail.com",
-      "currency": 37,
-      "wins": 37,
-      "losses": 48,
+      "currency": 350,
+      "wins": 38,
+      "losses": 55,
       "id": 1
     },
     {
@@ -47,6 +47,14 @@
       "wins": 1,
       "losses": 1,
       "id": 6
+    },
+    {
+      "name": "Junior Jones",
+      "email": "junior@coldmail.com",
+      "currency": 1430,
+      "wins": 2,
+      "losses": 33,
+      "id": 7
     }
   ],
   "horses": [
@@ -133,6 +141,42 @@
       "win": true,
       "date": "2/6/2023",
       "id": 10
+    },
+    {
+      "playerId": 1,
+      "amountBet": 300,
+      "choice": "Heads",
+      "outcome": "Tails",
+      "win": false,
+      "date": "2/7/2023",
+      "id": 11
+    },
+    {
+      "playerId": 7,
+      "amountBet": 250,
+      "choice": "Tails",
+      "outcome": "Tails",
+      "win": true,
+      "date": "2/7/2023",
+      "id": 12
+    },
+    {
+      "playerId": 7,
+      "amountBet": 250,
+      "choice": "Heads",
+      "outcome": "Heads",
+      "win": true,
+      "date": "2/7/2023",
+      "id": 13
+    },
+    {
+      "playerId": 7,
+      "amountBet": 250,
+      "choice": "Tails",
+      "outcome": "Heads",
+      "win": false,
+      "date": "2/7/2023",
+      "id": 14
     }
   ],
   "horseGames": [
@@ -216,6 +260,69 @@
       "win": false,
       "date": "2/6/2023",
       "id": 29
+    },
+    {
+      "playerId": 1,
+      "horseId": 2,
+      "amountBet": 10,
+      "newAmount": 0,
+      "win": false,
+      "date": "2/7/2023",
+      "id": 30
+    },
+    {
+      "playerId": 1,
+      "horseId": 2,
+      "amountBet": 10,
+      "newAmount": 0,
+      "win": false,
+      "date": "2/7/2023",
+      "id": 31
+    },
+    {
+      "playerId": 1,
+      "horseId": 2,
+      "amountBet": 10,
+      "newAmount": 0,
+      "win": false,
+      "date": "2/7/2023",
+      "id": 32
+    },
+    {
+      "playerId": 1,
+      "horseId": 2,
+      "amountBet": 10,
+      "newAmount": 0,
+      "win": false,
+      "date": "2/7/2023",
+      "id": 33
+    },
+    {
+      "playerId": 1,
+      "horseId": 2,
+      "amountBet": 10,
+      "newAmount": 0,
+      "win": false,
+      "date": "2/7/2023",
+      "id": 34
+    },
+    {
+      "playerId": 1,
+      "horseId": 2,
+      "amountBet": 10,
+      "newAmount": 0,
+      "win": false,
+      "date": "2/7/2023",
+      "id": 35
+    },
+    {
+      "playerId": 1,
+      "horseId": 2,
+      "amountBet": 10,
+      "newAmount": 110,
+      "win": true,
+      "date": "2/7/2023",
+      "id": 36
     }
   ]
 }

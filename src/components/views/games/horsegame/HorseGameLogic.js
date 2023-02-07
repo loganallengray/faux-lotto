@@ -11,6 +11,7 @@ export const HorseGameLogic = (horses, chosenHorse) => {
     const items = []
     const weights = []
 
+
     for (const horse of horses) {
         items.push(horse)
         weights.push(horse.chances)
