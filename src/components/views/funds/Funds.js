@@ -80,7 +80,7 @@ export const Funds = ({player, setPlayer}) => {
 
     return (
         <>
-            <h2>Funds</h2>
+            <h2 className="page-title">Funds</h2>
             <main id="main-content">
                 <div id="current-currency">
                     <div id="funds-display">Current Funds: ${parseFloat(player.currency).toFixed(2)}</div>

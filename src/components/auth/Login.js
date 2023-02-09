@@ -43,8 +43,10 @@ export const Login = () => {
                             required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <button type="submit">
-                            Sign in
+                        <button 
+                            className="auth--submit"
+                            type="submit"
+                        >Sign in
                         </button>
                     </fieldset>
                 </form>

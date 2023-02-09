@@ -6,6 +6,7 @@
 #current-currency {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
     min-width: 300px;
     width: 60%;
 }
@@ -19,20 +20,42 @@
 
 #fund-amount {
     box-sizing: border-box;
+    display: flex;
     min-width: 300px;
+    width: 60%;
 }
 
 #funds-input {
-    flex-shrink: 2;
     margin-right: 10px;
-    width: 40%;
+    min-width: 200px;
+    width: 70%;
 }
 
 #fund-submit {
-    width: 20%;
+    width: 30%;
 }
 
 #fund-form fieldset {
-    margin-top: 10px;
+    margin: 5px 0px;
     padding: 0px;
+}
+
+#funds-reset {
+    border-radius: 2px;
+    background-color: #d80909;
+}
+
+#funds-reset:hover {
+    transition: 0.5s;
+    background-color: #f50b0b;
+}
+
+#fund-submit {
+    border-radius: 2px;
+    background-color: #11c432;
+}
+
+#fund-submit:hover {
+    transition: 0.5s;
+    background-color: #16da16;
 }

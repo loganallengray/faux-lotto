@@ -34,48 +34,50 @@ export const Profile = ({player, playerId}) => {
     }, [selectedGameType]);
 
     return (
-        <>
-            <h2>{player.name}</h2>
-            <main id="main-content">
-                <div id="profile-content">
-                    <section id="player-info">
-                        <h3>Player Stats</h3>
-                            <div>Total Currency: ${parseFloat(player.currency).toFixed(2)}</div>
-                            <div>Total Wins: {player.wins}</div>
-                            <div>Total Losses: {player.losses}</div>
-                    </section>
-                    <section id="game-info">
-                        {showCoinGames ? (
-                            <article>
-                                <button
-                                    className="game--selector"
-                                    onClick={() => {
-                                        setSelectedGameType(2)
-                                    }}
-                                >Show Horse Races</button>
-                                <h3>Coin Games</h3>
-                                <ul>
-                                    {coinGames.map((coinGame) => <CoinGameList coinGame={coinGame} setCoinGames={setCoinGames} key={coinGame.id} />)}
-                                </ul>
-                            </article>
-                        ) : ""}
-                        {showHorseGames ? (
-                            <article>
-                                <button
-                                    className="game--selector"
-                                    onClick={() => {
-                                        setSelectedGameType(1)
-                                    }}
-                                >Show Coin Games</button>
-                                <h3>Horse Races</h3>
-                                <ul>
-                                    {horseGames.map((horseGame) => <HorseGameList horseGame={horseGame} setHorseGames={setHorseGames} key={horseGame.id} />)}
-                                </ul>
-                            </article>
-                        ) : ""}
-                    </section>
-                </div>
-            </main>
-        </>
+        <div id="sidebar-container">
+            <div id="profile-container">
+                <h2 className="page-title">{player.name}</h2>
+                <main id="main-content">
+                    <div id="profile-content">
+                        <section id="player-info">
+                            <h3>Player Stats</h3>
+                                <div>Total Currency: ${parseFloat(player.currency).toFixed(2)}</div>
+                                <div>Total Wins: {player.wins}</div>
+                                <div>Total Losses: {player.losses}</div>
+                        </section>
+                    </div>
+                </main>
+            </div>
+            <section id="game-info">
+                {showCoinGames ? (
+                    <article>
+                        <button
+                            className="game--selector"
+                            onClick={() => {
+                                setSelectedGameType(2)
+                            }}
+                        >Show Horse Races</button>
+                        <h3>Coin Games</h3>
+                        <ul>
+                            {coinGames.map((coinGame) => <CoinGameList coinGame={coinGame} setCoinGames={setCoinGames} key={coinGame.id} />)}
+                        </ul>
+                    </article>
+                ) : ""}
+                {showHorseGames ? (
+                    <article>
+                        <button
+                            className="game--selector"
+                            onClick={() => {
+                                setSelectedGameType(1)
+                            }}
+                        >Show Coin Games</button>
+                        <h3>Horse Races</h3>
+                        <ul>
+                            {horseGames.map((horseGame) => <HorseGameList horseGame={horseGame} setHorseGames={setHorseGames} key={horseGame.id} />)}
+                        </ul>
+                    </article>
+                ) : ""}
+            </section>
+        </div>
     )
 } 

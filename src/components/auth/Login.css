@@ -1,5 +1,6 @@
 .h1, h1 {
     font-size: 2.5rem;
+    color: #c33132;
 }
 
 fieldset {
@@ -7,6 +8,10 @@ fieldset {
     padding: 1rem 0;
     margin: 0;
     border: 0;
+}
+
+.container--login input {
+    margin: 10px 0px 0px 0px;
 }
 
 .form--login {
@@ -60,3 +65,12 @@ fieldset {
     bottom: -2rem;
 }
 
+.auth--submit {
+    box-shadow: 0 0 5px #333;
+    color: #333;
+}
+
+.auth--submit:hover {
+    background-color: #fff;
+    box-shadow: 0 0 5px #000;
+}

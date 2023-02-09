@@ -3,6 +3,10 @@
     flex-direction: column;
 }
 
+#horse--display {
+    margin: 10px;
+}
+
 #horse-game--display {
     margin-bottom: 15px;
 }
@@ -19,20 +23,40 @@
     margin: 0 0 10px 0;
 }
 
-#horse-amount-header {
+#horse-options-header {
     display: flex;
     justify-content: space-between;
-    min-width: 300px;
+    min-width: 315px;
+    width: 60%;
+}
+
+#horse-amount {
+    display: flex;
     width: 60%;
 }
 
 #horse-amount-input {
-    margin-top: 10px;
-    min-width: 300px;
-    width: 60%;
+    margin-right: 10px;
+    min-width: 200px;
+    width: 70%;
 }
 
 #horse-submit {
-    min-width: 80px;
+    min-width: 100px;
     width: 30%;
+}
+
+#horse-form fieldset {
+    margin: 5px 0px;
+    padding: 0px;
+}
+
+#horse-submit {
+    border-radius: 2px;
+    background-color: #11c432;
+}
+
+#horse-submit:hover {
+    transition: 0.5s;
+    background-color: #16da16;
 }
