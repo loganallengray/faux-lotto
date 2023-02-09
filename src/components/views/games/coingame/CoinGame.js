@@ -5,7 +5,7 @@ import "./CoinGame.css"
 
 export const CoinGame = ({player, setPlayer}) => {
     const [userChoices, setUserChoices] = useState({
-        call: 0,
+        call: true,
         amountBet: false,
         betAll: false
     })
@@ -28,6 +28,7 @@ export const CoinGame = ({player, setPlayer}) => {
                 choice: result.choice,
                 outcome: result.flip,
                 win: result.win,
+                featured: false,
                 date: new Date().toLocaleDateString()
             }
             
@@ -78,7 +79,7 @@ export const CoinGame = ({player, setPlayer}) => {
                 <form id="coin-form">
                     <fieldset id="coin-choice">
                         <div className="coin-container">
-                            <button
+                            {userChoices.call ? <button
                                 className="coin-button"
                                 onClick={(event) => {
                                     event.preventDefault()
@@ -87,10 +88,19 @@ export const CoinGame = ({player, setPlayer}) => {
                                     setUserChoices(copy)
                             }}
                             >Heads</button>
+                            : <button
+                                className="coin-button coin-unselected"
+                                onClick={(event) => {
+                                    event.preventDefault()
+                                    const copy = {...userChoices}
+                                    copy.call = true
+                                    setUserChoices(copy)
+                            }}
+                            >Heads</button>}
                         </div>
                         <div className="coin-container">
-                            <button
-                            className="coin-button"
+                            {userChoices.call ? <button
+                            className="coin-button coin-unselected"
                                 onClick={(event) => {
                                     event.preventDefault()
                                     const copy = {...userChoices}
@@ -98,6 +108,15 @@ export const CoinGame = ({player, setPlayer}) => {
                                     setUserChoices(copy)
                             }}
                             >Tails</button>
+                            : <button
+                            className="coin-button"
+                                onClick={(event) => {
+                                    event.preventDefault()
+                                    const copy = {...userChoices}
+                                    copy.call = false
+                                    setUserChoices(copy)
+                            }}
+                            >Tails</button>}
                         </div>
                     </fieldset>
                     <fieldset id="coin-options">

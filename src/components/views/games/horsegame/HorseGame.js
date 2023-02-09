@@ -50,6 +50,7 @@ export const HorseGame = ({player, setPlayer}) => {
                         amountBet: parseFloat(userChoices.amountBet),
                         newAmount: 0,
                         win: result.win,
+                        featured: false,
                         date: new Date().toLocaleDateString()
                     }
                     

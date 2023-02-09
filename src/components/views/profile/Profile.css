@@ -14,7 +14,7 @@
 }
 
 #game-info {
-    background-color: #ddd;
+    background-color: #dde0e3;
     border-left: solid 3px #ccc;
     height: calc(100vh - 63px);
     margin: -10px -10px -10px 0px;
@@ -52,9 +52,17 @@
     text-align: center;
 }
 
+.game--won {
+    background-color: #c6f4b3;
+}
+
+.game--lost {
+    background-color: #f9c6cb;
+}
+
 /* select game type button */
 .game--selector {
-    background-color: #f8f8f8;
+    background-color: #f8f8f9;
     color: #333;
     margin-bottom: 10px;
     width: 100%;
@@ -76,12 +84,35 @@
 }
 
 .game--delete {
-    background-color: #d80909;
+    background-color: #d81424;
     margin-top: 5px;
     width: 50%;
 }
 
 .game--delete:hover {
     transition: 0.5s;
-    background-color: #f50b0b;
+    background-color: #e71526;
+}
+
+/* feature/unfeature game button */
+.game--feature {
+    background-color: #47ba1a;
+    margin: 5px 5px 0 0;
+    width: 50%;
+}
+
+.game--feature:hover {
+    background-color: #4cc81c;
+    transition: 0.5s;
+}
+
+.game--unfeature {
+    background-color: #1c4dc7;
+    margin: 5px 5px 0 0;
+    width: 50%;
+}
+
+.game--unfeature:hover {
+    background-color: #1f52d5;
+    transition: 0.5s;
 }

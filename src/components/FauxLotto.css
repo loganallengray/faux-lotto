@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    background-color: #eff0f2;
+}
+
 #page-content {
     padding: 10px;
 }

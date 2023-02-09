@@ -4,7 +4,7 @@ import { Funds } from "./funds/Funds"
 import { CoinGame } from "./games/coingame/CoinGame"
 import { Games } from "./games/Games"
 import { HorseGame } from "./games/horsegame/HorseGame"
-import { HomePage } from "./HomePage"
+import { HomePage } from "./homepage/HomePage"
 import { Profile } from "./profile/Profile"
 
 export const ApplicationViews = () => {
@@ -24,7 +24,7 @@ export const ApplicationViews = () => {
     return (
         <div id="page-content">
             <Routes>
-                <Route path="" element={<HomePage />} />
+                <Route path="" element={<HomePage player={player} setPlayer={setPlayer} />} />
                 <Route path="games" element={ <Games /> } />
                 <Route path="coingame" element={<CoinGame player={player} setPlayer={setPlayer} />} />
                 <Route path="horsegame" element={<HorseGame player={player} setPlayer={setPlayer} />} />
