@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import { CoinGameList } from "./CoinGameList";
-import { HorseGameList } from "./HorseGameList";
-import "./Profile.css"
+import { useEffect, useState } from "react"
+import { FeaturedCoinGameList } from "./FeaturedCoinGameList"
+import { FeaturedHorseGameList } from "./FeaturedHorseGameList"
+import "./HomePage.css"
 
-export const Profile = ({player, playerId}) => {
+export const HomePage = (player, setPlayer) => {
     const [coinGames, setCoinGames] = useState([])
     const [horseGames, setHorseGames] = useState([])
     const [showCoinGames, setShowCoinGames] = useState(true)
@@ -11,12 +11,12 @@ export const Profile = ({player, playerId}) => {
     const [selectedGameType, setSelectedGameType] = useState(1)
 
     useEffect(() => {
-        fetch(`http://localhost:8088/coinGames?playerId=${playerId}&_sort=id&_order=desc`)
+        fetch(`http://localhost:8088/coinGames?featured=true&_expand=player&_sort=id&_order=desc`)
             .then((res) => res.json())
             .then((data) => {
                 setCoinGames(data)
             })
-        fetch(`http://localhost:8088/horseGames?playerId=${playerId}&_expand=horse&_sort=id&_order=desc`)
+        fetch(`http://localhost:8088/horseGames?featured=true&_expand=player&_expand=horse&_sort=id&_order=desc`)
             .then((res) => res.json())
             .then((data) => {
                 setHorseGames(data)
@@ -35,17 +35,10 @@ export const Profile = ({player, playerId}) => {
 
     return (
         <div id="sidebar-container">
-            <div id="profile-container">
-                <h2 className="page-title">{player.name}</h2>
+            <div>
+                <h2>Welcome to Faux Lotto!</h2>
                 <main id="main-content">
-                    <div id="profile-content">
-                        <section id="player-info">
-                            <h3>Player Stats</h3>
-                                <div>Total Currency: ${parseFloat(player.currency).toFixed(2)}</div>
-                                <div>Total Wins: {player.wins}</div>
-                                <div>Total Losses: {player.losses}</div>
-                        </section>
-                    </div>
+                    <p>Select a game to play from the Games page, but not before you add some funds to your account on the Funds page!</p>
                 </main>
             </div>
             <section id="game-info">
@@ -59,7 +52,7 @@ export const Profile = ({player, playerId}) => {
                         >Show Horse Races</button>
                         <h3>Coin Games</h3>
                         <ul>
-                            {coinGames.map((coinGame) => <CoinGameList coinGame={coinGame} setCoinGames={setCoinGames} key={coinGame.id} />)}
+                            {coinGames.map((coinGame) => <FeaturedCoinGameList coinGame={coinGame} setCoinGames={setCoinGames} key={coinGame.id} />)}
                         </ul>
                     </article>
                 ) : ""}
@@ -73,11 +66,11 @@ export const Profile = ({player, playerId}) => {
                         >Show Coin Games</button>
                         <h3>Horse Races</h3>
                         <ul>
-                            {horseGames.map((horseGame) => <HorseGameList horseGame={horseGame} setHorseGames={setHorseGames} key={horseGame.id} />)}
+                            {horseGames.map((horseGame) => <FeaturedHorseGameList horseGame={horseGame} setHorseGames={setHorseGames} key={horseGame.id} />)}
                         </ul>
                     </article>
                 ) : ""}
             </section>
         </div>
     )
-} 
+}

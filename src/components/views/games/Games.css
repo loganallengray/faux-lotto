@@ -19,11 +19,12 @@
 }
 
 .game-box h3 {
-    color: #c33132;
+    color: #1b48ba;
     text-decoration: none;
 }
 
 .game-box h3:hover {
-    color: #e73b3b;
+    color: #295fe8;
     text-decoration: underline;
+    transition: 0.5s;
 }

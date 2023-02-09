@@ -42,20 +42,20 @@
 
 #funds-reset {
     border-radius: 2px;
-    background-color: #d80909;
+    background-color: #d81424;
 }
 
 #funds-reset:hover {
     transition: 0.5s;
-    background-color: #f50b0b;
+    background-color: #e71526;
 }
 
 #fund-submit {
     border-radius: 2px;
-    background-color: #11c432;
+    background-color: #47ba1a;
 }
 
 #fund-submit:hover {
     transition: 0.5s;
-    background-color: #16da16;
+    background-color: #4cc81c;
 }

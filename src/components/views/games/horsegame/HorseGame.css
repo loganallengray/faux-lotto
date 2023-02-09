@@ -53,10 +53,10 @@
 
 #horse-submit {
     border-radius: 2px;
-    background-color: #11c432;
+    background-color: #47ba1a;
 }
 
 #horse-submit:hover {
     transition: 0.5s;
-    background-color: #16da16;
+    background-color: #4cc81c;
 }
