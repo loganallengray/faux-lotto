@@ -71,7 +71,10 @@ export const Register = (props) => {
                         placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
-                    <button type="submit"> Register </button>
+                    <button 
+                        className="auth--submit"
+                        type="submit"
+                    >Register</button>
                 </fieldset>
             </form>
         </main>

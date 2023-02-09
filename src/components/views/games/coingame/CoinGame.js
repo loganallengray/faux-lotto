@@ -72,7 +72,7 @@ export const CoinGame = ({player, setPlayer}) => {
 
     return (
         <>
-            <h2>Coin Game</h2>
+            <h2 className="page-title">Coin Game</h2>
             <main id="main-content">
                 <CoinGameDisplay results={results} showResults={showResults} />
                 <form id="coin-form">

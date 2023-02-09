@@ -24,5 +24,6 @@
 }
 
 .game-box h3:hover {
+    color: #e73b3b;
     text-decoration: underline;
 }

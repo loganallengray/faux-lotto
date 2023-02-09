@@ -7,6 +7,10 @@
     padding: 10px;
 }
 
+.page-title {
+    font-size: 1.7em;
+}
+
 #main-content {
     padding: 0px 5px;
 }

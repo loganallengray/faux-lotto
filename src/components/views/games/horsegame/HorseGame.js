@@ -100,7 +100,7 @@ export const HorseGame = ({player, setPlayer}) => {
 
     return (
         <>
-            <h2>Horse Race</h2>
+            <h2 className="page-title">Horse Race</h2>
             <main id="main-content">
                 <HorseGameDisplay results={results} showResults={showResults} />
                 <form id="horse-form">

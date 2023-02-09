@@ -4,7 +4,7 @@ import "./Games.css"
 export const Games = () => {
     return (
         <>
-            <h2>Game List</h2>
+            <h2 className="page-title">Game List</h2>
             <main id="main-content">
                 <section id="game-box-container">
                     <article className="game-box">

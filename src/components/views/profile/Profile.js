@@ -36,7 +36,7 @@ export const Profile = ({player, playerId}) => {
     return (
         <div id="sidebar-container">
             <div id="profile-container">
-                <h2>{player.name}</h2>
+                <h2 className="page-title">{player.name}</h2>
                 <main id="main-content">
                     <div id="profile-content">
                         <section id="player-info">
