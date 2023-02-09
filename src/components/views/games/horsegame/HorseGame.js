@@ -119,9 +119,9 @@ export const HorseGame = ({player, setPlayer}) => {
                         </select>
                     </fieldset>
                     <HorseDisplay horse={chosenHorse} showHorse={showChosenHorse} />
-                    <fieldset id="horse-amount">
+                    <fieldset id="horse-options">
                         <div id="currency-amount">Current Currency: ${parseFloat(player.currency).toFixed(2)}</div>
-                        <div id="horse-amount-header">
+                        <div id="horse-options-header">
                             <label>Bet Amount</label>
                                 <div>
                                     <label>Bet all?</label>
@@ -135,6 +135,8 @@ export const HorseGame = ({player, setPlayer}) => {
                                         }} />
                                 </div>
                         </div>
+                    </fieldset>
+                    <fieldset id="horse-amount">
                         <input 
                             id="horse-amount-input"
                             type="number" 
@@ -147,13 +149,13 @@ export const HorseGame = ({player, setPlayer}) => {
                                 copy.amountBet = event.target.value
                                 setUserChoices(copy)
                             }} />
+                        <button 
+                            id="horse-submit"
+                            onClick={(event) => {
+                                handleRace(event)
+                            }}
+                        >Start Race</button>
                     </fieldset>
-                    <button 
-                        id="horse-submit"
-                        onClick={(event) => {
-                            handleRace(event)
-                        }}
-                    >Start Race</button>
                 </form>
             </main>
         </>

@@ -51,9 +51,9 @@
     {
       "name": "Junior Jones",
       "email": "junior@coldmail.com",
-      "currency": 1430,
-      "wins": 2,
-      "losses": 33,
+      "currency": 1800,
+      "wins": 7,
+      "losses": 39,
       "id": 7
     }
   ],
@@ -154,15 +154,6 @@
     {
       "playerId": 7,
       "amountBet": 250,
-      "choice": "Tails",
-      "outcome": "Tails",
-      "win": true,
-      "date": "2/7/2023",
-      "id": 12
-    },
-    {
-      "playerId": 7,
-      "amountBet": 250,
       "choice": "Heads",
       "outcome": "Heads",
       "win": true,
@@ -177,6 +168,105 @@
       "win": false,
       "date": "2/7/2023",
       "id": 14
+    },
+    {
+      "playerId": 7,
+      "amountBet": 50,
+      "choice": "Heads",
+      "outcome": "Heads",
+      "win": true,
+      "date": "2/8/2023",
+      "id": 15
+    },
+    {
+      "playerId": 7,
+      "amountBet": 50,
+      "choice": "Heads",
+      "outcome": "Tails",
+      "win": false,
+      "date": "2/8/2023",
+      "id": 16
+    },
+    {
+      "playerId": 7,
+      "amountBet": 50,
+      "choice": "Heads",
+      "outcome": "Tails",
+      "win": false,
+      "date": "2/8/2023",
+      "id": 17
+    },
+    {
+      "playerId": 7,
+      "amountBet": 50,
+      "choice": "Heads",
+      "outcome": "Heads",
+      "win": true,
+      "date": "2/8/2023",
+      "id": 18
+    },
+    {
+      "playerId": 7,
+      "amountBet": 50,
+      "choice": "Heads",
+      "outcome": "Tails",
+      "win": false,
+      "date": "2/8/2023",
+      "id": 19
+    },
+    {
+      "playerId": 7,
+      "amountBet": 50,
+      "choice": "Heads",
+      "outcome": "Tails",
+      "win": false,
+      "date": "2/8/2023",
+      "id": 20
+    },
+    {
+      "playerId": 7,
+      "amountBet": 50,
+      "choice": "Heads",
+      "outcome": "Tails",
+      "win": false,
+      "date": "2/8/2023",
+      "id": 21
+    },
+    {
+      "playerId": 7,
+      "amountBet": 50,
+      "choice": "Heads",
+      "outcome": "Heads",
+      "win": true,
+      "date": "2/8/2023",
+      "id": 22
+    },
+    {
+      "playerId": 7,
+      "amountBet": 50,
+      "choice": "Heads",
+      "outcome": "Heads",
+      "win": true,
+      "date": "2/8/2023",
+      "id": 23
+    },
+    {
+      "playerId": 7,
+      "amountBet": 50,
+      "choice": "Heads",
+      "outcome": "Tails",
+      "win": false,
+      "date": "2/8/2023",
+      "id": 24
+    },
+    {
+      "playerId": 7,
+      "amountBet": 50,
+      "choice": "Heads",
+      "outcome": "Heads",
+      "win": true,
+      "date": "2/8/2023",
+      "id": 25
     }
   ],
   "horseGames": [

@@ -1,15 +1,26 @@
+#sidebar-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#profile-container {
+    min-width: 160px;
+    width: 75%;
+}
+
 #profile-content {
     display: flex;
     justify-content: space-between;
 }
 
-/* outermost containers */
-#player-info {
-    width: 75%;
-}
-
 #game-info {
+    background-color: #ddd;
+    border-left: solid 3px #ccc;
+    height: calc(100vh - 63px);
+    margin: -10px -10px -10px 0px;
     min-width: 200px;
+    overflow: scroll;
+    padding: 10px 12px 10px 10px;
     width: 25%;
 }
 
@@ -20,15 +31,20 @@
 /* game list */
 #game-info ul {
     list-style: none;
-    padding-left: 0;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
     margin: 0px;
+    padding-left: 0;
+    padding-inline-start: 0px;
 }
 
 /* individual games */
 .player--game {
+    background-color: #f4f4f4;
     display: flex;
-    margin: 10px 0px;
     flex-direction: column;
+    margin: 10px 0px;
+    padding: 10px;
 }
 
 .player--game h4 {
@@ -38,6 +54,15 @@
 
 /* select game type button */
 .game--selector {
+    background-color: #f8f8f8;
+    color: #333;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.game--selector:hover {
+    background-color: #fff;
+    color: #000;
     margin-bottom: 10px;
     width: 100%;
 }
@@ -51,6 +76,12 @@
 }
 
 .game--delete {
+    background-color: #d80909;
     margin-top: 5px;
     width: 50%;
+}
+
+.game--delete:hover {
+    transition: 0.5s;
+    background-color: #f50b0b;
 }

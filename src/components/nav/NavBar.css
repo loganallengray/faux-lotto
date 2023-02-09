@@ -1,14 +1,72 @@
 .navbar {
+    align-items: center;
+    background-color: #c33132;
+    border-bottom: solid 3px #9d2626;
+    box-shadow: 0px 0px 13px #333;
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
 }
 
-.navbar__item {
+/* sends you to home css */
+#navbar__home {
+    color: #f3f3f3;
+    font-size: 1.5em;
+    font-weight: bold;
+    /* justify-content: start   ; */
+    transition: 1s;
+}
+
+#navbar__home__container {
     flex-basis: 20%;
+    /* justify-content: start   ; */
+    min-width: 150px;
+}
+
+/* individual navbar items */
+.navbar__item {
+    align-items: center;
+    display: flex;
+    flex-basis: 10%;
+    height: 40px;
+    justify-content: center;
     list-style-type: none;
+    min-width: 60px;
 }
 
 .navbar__logout {
     margin-left: auto;
+}
+
+.navbar__item p {
+    text-align: center;
+    width: 100%;
+}
+
+.navbar__link {
+    color: #f3f3f3;
+    text-decoration: none;
+    transition: 1s;
+}
+
+/* hovers and animations and such */
+
+.navbar__link:hover {
+    color: #fff;
+    text-shadow: 0px 0px 7px #c5c5c5;
+}
+
+#navbar__home:hover {
+    cursor: pointer;
+    color: #fff;
+    text-shadow: 0px 0px 7px #c5c5c5;
+}
+
+#navbar__home:hover, .navbar__link:hover {
+    transform: scale(1.1);
+    transition: 0.25s;
+}
+
+#navbar__home:active, .navbar__link:active {
+    transform: scale(0.9);
 }

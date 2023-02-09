@@ -6,20 +6,21 @@ export const NavBar = () => {
 
     return (
         <ul className="navbar">
-            <li className="navbar__item active">
+            <li 
+                id="navbar__home__container"
+                className="navbar__item navbar__home active">
                 <div
-                    id="navbar__home"
                     onClick={() => {navigate("/")}}
-                >Faux Lotto</div>
+                ><p id="navbar__home">Faux Lotto</p></div>
             </li>
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/games">Games</Link>
+                <Link className="navbar__link" to="/games"><p>Games</p></Link>
             </li>
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/funds">Funds</Link>
+                <Link className="navbar__link" to="/funds"><p>Funds</p></Link>
             </li>
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/profile">Profile</Link>
+                <Link className="navbar__link" to="/profile"><p>Profile</p></Link>
             </li>
             {
                 localStorage.getItem("lotto_user")
@@ -27,7 +28,7 @@ export const NavBar = () => {
                         <Link className="navbar__link" to="" onClick={() => {
                             localStorage.removeItem("lotto_user")
                             navigate("/", {replace: true})
-                        }}>Logout</Link>
+                        }}><p>Logout</p></Link>
                     </li>
                     : ""
             }

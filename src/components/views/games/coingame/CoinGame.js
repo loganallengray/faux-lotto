@@ -77,26 +77,32 @@ export const CoinGame = ({player, setPlayer}) => {
                 <CoinGameDisplay results={results} showResults={showResults} />
                 <form id="coin-form">
                     <fieldset id="coin-choice">
-                        <button
-                            onClick={(event) => {
-                                event.preventDefault()
-                                const copy = {...userChoices}
-                                copy.call = true
-                                setUserChoices(copy)
-                        }}
-                        >Heads</button>
-                        <button
-                            onClick={(event) => {
-                                event.preventDefault()
-                                const copy = {...userChoices}
-                                copy.call = false
-                                setUserChoices(copy)
-                        }}
-                        >Tails</button>
+                        <div className="coin-container">
+                            <button
+                                className="coin-button"
+                                onClick={(event) => {
+                                    event.preventDefault()
+                                    const copy = {...userChoices}
+                                    copy.call = true
+                                    setUserChoices(copy)
+                            }}
+                            >Heads</button>
+                        </div>
+                        <div className="coin-container">
+                            <button
+                            className="coin-button"
+                                onClick={(event) => {
+                                    event.preventDefault()
+                                    const copy = {...userChoices}
+                                    copy.call = false
+                                    setUserChoices(copy)
+                            }}
+                            >Tails</button>
+                        </div>
                     </fieldset>
-                    <fieldset id="coin-amount">
+                    <fieldset id="coin-options">
                         <div id="currency-amount">Current Currency: ${parseFloat(player.currency).toFixed(2)}</div>
-                        <div id="coin-amount-header">
+                        <div id="coin-options-header">
                             <label>Bet Amount</label>
                             <div>
                                 <label>Bet all?</label>
@@ -110,6 +116,8 @@ export const CoinGame = ({player, setPlayer}) => {
                                     }} />
                             </div>
                         </div>
+                    </fieldset>
+                    <fieldset id="coin-amount">
                         <input 
                             id="coins-amount-input"
                             type="number" 
@@ -122,13 +130,13 @@ export const CoinGame = ({player, setPlayer}) => {
                                 copy.amountBet = event.target.value
                                 setUserChoices(copy)
                         }} />
+                        <button 
+                            id="coin-submit"
+                            onClick={(event) => {
+                                handleFlip(event)
+                            }}
+                        >Flip Coin</button>
                     </fieldset>
-                    <button 
-                        id="coin-submit"
-                        onClick={(event) => {
-                            handleFlip(event)
-                        }}
-                    >Flip Coin</button>
                 </form>
             </main>
         </>
