@@ -17,11 +17,19 @@
     background-color: #dde0e3;
     border-left: solid 3px #ccc;
     height: calc(100vh - 63px);
-    margin: -10px -10px -10px 0px;
+    margin: -7px 0px 0px 0px;
     min-width: 200px;
     overflow: scroll;
+    right: 0%;
+    top: calc(0% + 63px);
     padding: 10px 12px 10px 10px;
+    position: fixed;
     width: 25%;
+}
+
+#game-space {
+    min-width: 250px;
+    width: 75%;
 }
 
 #game-info h3 {

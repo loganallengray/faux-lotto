@@ -3,17 +3,17 @@
     {
       "name": "John Smith",
       "email": "yesthatsreallymyname@coldmail.com",
-      "currency": 1447,
-      "wins": 44,
-      "losses": 59,
+      "currency": 12000,
+      "wins": 47,
+      "losses": 67,
       "id": 1
     },
     {
       "name": "Jane Doe",
       "email": "mysterywoman@coldmail.com",
-      "currency": 600,
-      "wins": 15,
-      "losses": 10,
+      "currency": 601,
+      "wins": 18,
+      "losses": 14,
       "id": 2
     },
     {
@@ -104,7 +104,7 @@
       "choice": "Tails",
       "outcome": "Tails",
       "win": true,
-      "featured": true,
+      "featured": false,
       "date": "2/8/2023",
       "id": 2
     },
@@ -157,6 +157,46 @@
       "featured": true,
       "date": "2/9/2023",
       "id": 7
+    },
+    {
+      "playerId": 1,
+      "amountBet": 500,
+      "choice": "Tails",
+      "outcome": "Heads",
+      "win": false,
+      "featured": false,
+      "date": "2/10/2023",
+      "id": 8
+    },
+    {
+      "playerId": 1,
+      "amountBet": 500,
+      "choice": "Heads",
+      "outcome": "Tails",
+      "win": false,
+      "featured": false,
+      "date": "2/10/2023",
+      "id": 9
+    },
+    {
+      "playerId": 1,
+      "amountBet": 500,
+      "choice": "Heads",
+      "outcome": "Tails",
+      "win": false,
+      "featured": false,
+      "date": "2/10/2023",
+      "id": 10
+    },
+    {
+      "playerId": 1,
+      "amountBet": 500,
+      "choice": "Heads",
+      "outcome": "Heads",
+      "win": true,
+      "featured": false,
+      "date": "2/10/2023",
+      "id": 11
     }
   ],
   "horseGames": [
@@ -169,16 +209,6 @@
       "featured": true,
       "date": "2/9/2023",
       "id": 2
-    },
-    {
-      "playerId": 2,
-      "horseId": 2,
-      "amountBet": 2,
-      "newAmount": 0,
-      "win": false,
-      "featured": false,
-      "date": "2/9/2023",
-      "id": 3
     },
     {
       "playerId": 1,
@@ -199,6 +229,96 @@
       "featured": true,
       "date": "2/9/2023",
       "id": 6
+    },
+    {
+      "playerId": 1,
+      "horseId": 1,
+      "amountBet": 500,
+      "newAmount": 666.6666666666666,
+      "win": true,
+      "featured": true,
+      "date": "2/10/2023",
+      "id": 12
+    },
+    {
+      "playerId": 1,
+      "horseId": 2,
+      "amountBet": 1000,
+      "newAmount": 11000,
+      "win": true,
+      "featured": true,
+      "date": "2/10/2023",
+      "id": 13
+    },
+    {
+      "playerId": 2,
+      "horseId": 4,
+      "amountBet": 2,
+      "newAmount": 0,
+      "win": false,
+      "featured": false,
+      "date": "2/10/2023",
+      "id": 14
+    },
+    {
+      "playerId": 2,
+      "horseId": 4,
+      "amountBet": 2,
+      "newAmount": 0,
+      "win": false,
+      "featured": false,
+      "date": "2/10/2023",
+      "id": 15
+    },
+    {
+      "playerId": 2,
+      "horseId": 4,
+      "amountBet": 2,
+      "newAmount": 3,
+      "win": true,
+      "featured": false,
+      "date": "2/10/2023",
+      "id": 16
+    },
+    {
+      "playerId": 2,
+      "horseId": 4,
+      "amountBet": 2,
+      "newAmount": 0,
+      "win": false,
+      "featured": false,
+      "date": "2/10/2023",
+      "id": 17
+    },
+    {
+      "playerId": 2,
+      "horseId": 4,
+      "amountBet": 2,
+      "newAmount": 3,
+      "win": true,
+      "featured": false,
+      "date": "2/10/2023",
+      "id": 18
+    },
+    {
+      "playerId": 2,
+      "horseId": 4,
+      "amountBet": 2,
+      "newAmount": 3,
+      "win": true,
+      "featured": false,
+      "date": "2/10/2023",
+      "id": 19
+    },
+    {
+      "playerId": 2,
+      "horseId": 4,
+      "amountBet": 2,
+      "newAmount": 0,
+      "win": false,
+      "featured": false,
+      "date": "2/10/2023",
+      "id": 20
     }
   ]
 }
