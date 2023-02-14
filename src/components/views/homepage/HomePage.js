@@ -34,13 +34,35 @@ export const HomePage = (player, setPlayer) => {
     }, [selectedGameType]);
 
     return (
+        <>
         <div id="sidebar-container">
-            <div>
+            <div id="home-QA-container">
                 <h2>Welcome to Faux Lotto!</h2>
                 <main id="main-content">
-                    <p>Select a game to play from the Games page, but not before you add some funds to your account on the Funds page!</p>
+                    <div className="home-QA">
+                        <h3>What is Faux Lotto?</h3>
+                        <p>Faux Lotto is a website for people who are underage, don't have money, or just want to feel the thrill of gambling without any of the consequences!</p>
+                    </div>
+                    <div className="home-QA">
+                        <h3>How do I start?</h3>
+                        <p>First you'll need some money to bet with. Click on "Funds" in the bar up top. Once there you're able to add fake currency to your account.</p>
+                    </div>
+                    <div className="home-QA">
+                        <h3>Ok. How do I gamble though?</h3>
+                        <p>Once you've got some money, you can go to the games page, where you can select from a list of games to bet on. From there you just make a choice and then choose an amount to bet.</p>
+                    </div>
+                    <div className="home-QA">
+                        <h3>What's the Profile in the top bar for?</h3>
+                        <p>That is your profile. You use it to look at your stats, like how much money you currently have, or how many games you've won or lost total. You can also use it to look at your previously played games, where you can leave them be, delete them, or feature them on the front page for all to see.</p>
+                    </div>
+                    <div className="home-QA">
+                        <h3>How do I feature or delete a game I've played?</h3>
+                        <p>You click on the feature button to feature it. If you've featured a game by mistake, you can easily unfeature it by pressing the button again. You delete a game by pressing the delete button. Once you delete a game, it cannot be recovered.</p>
+                    </div>
                 </main>
             </div>
+            <div id="game-space"></div>
+        </div>
             <section id="game-info">
                 {showCoinGames ? (
                     <article>
@@ -71,6 +93,6 @@ export const HomePage = (player, setPlayer) => {
                     </article>
                 ) : ""}
             </section>
-        </div>
+            </>
     )
 }
