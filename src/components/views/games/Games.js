@@ -15,6 +15,10 @@ export const Games = () => {
                         <Link to="/horsegame"><h3>Horse Race</h3></Link>
                         <p>Choose a horse to bet on, riskier bets have better payouts!</p>
                     </article>
+                    <article className="game-box game-box-double">
+                        <Link to="/cardgame"><h3>Blackjack</h3></Link>
+                        <p>Try to reach 21 with the value of your deck, but don't go over!</p>
+                    </article>
                 </section>
             </main>
         </>

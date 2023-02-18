@@ -87,6 +87,320 @@
       "odds": "1-2"
     }
   ],
+  "cards": [
+    {
+      "id": 1,
+      "name": "2-C",
+      "value": 2,
+      "ace": false
+    },
+    {
+      "id": 2,
+      "name": "2-S",
+      "value": 2,
+      "ace": false
+    },
+    {
+      "id": 3,
+      "name": "2-D",
+      "value": 2,
+      "ace": false
+    },
+    {
+      "id": 4,
+      "name": "2-H",
+      "value": 2,
+      "ace": false
+    },
+    {
+      "id": 5,
+      "name": "3-C",
+      "value": 3,
+      "ace": false
+    },
+    {
+      "id": 6,
+      "name": "3-S",
+      "value": 3,
+      "ace": false
+    },
+    {
+      "id": 7,
+      "name": "3-D",
+      "value": 3,
+      "ace": false
+    },
+    {
+      "id": 8,
+      "name": "3-H",
+      "value": 3,
+      "ace": false
+    },
+    {
+      "id": 9,
+      "name": "4-C",
+      "value": 4,
+      "ace": false
+    },
+    {
+      "id": 10,
+      "name": "4-S",
+      "value": 4,
+      "ace": false
+    },
+    {
+      "id": 11,
+      "name": "4-D",
+      "value": 4,
+      "ace": false
+    },
+    {
+      "id": 12,
+      "name": "4-H",
+      "value": 4,
+      "ace": false
+    },
+    {
+      "id": 13,
+      "name": "5-C",
+      "value": 5,
+      "ace": false
+    },
+    {
+      "id": 14,
+      "name": "5-S",
+      "value": 5,
+      "ace": false
+    },
+    {
+      "id": 15,
+      "name": "5-D",
+      "value": 5,
+      "ace": false
+    },
+    {
+      "id": 16,
+      "name": "5-H",
+      "value": 5,
+      "ace": false
+    },
+    {
+      "id": 17,
+      "name": "6-C",
+      "value": 6,
+      "ace": false
+    },
+    {
+      "id": 18,
+      "name": "6-S",
+      "value": 6,
+      "ace": false
+    },
+    {
+      "id": 19,
+      "name": "6-D",
+      "value": 6,
+      "ace": false
+    },
+    {
+      "id": 20,
+      "name": "6-H",
+      "value": 6,
+      "ace": false
+    },
+    {
+      "id": 21,
+      "name": "7-C",
+      "value": 7,
+      "ace": false
+    },
+    {
+      "id": 22,
+      "name": "7-S",
+      "value": 7,
+      "ace": false
+    },
+    {
+      "id": 23,
+      "name": "7-D",
+      "value": 7,
+      "ace": false
+    },
+    {
+      "id": 24,
+      "name": "7-H",
+      "value": 7,
+      "ace": false
+    },
+    {
+      "id": 25,
+      "name": "8-C",
+      "value": 8,
+      "ace": false
+    },
+    {
+      "id": 26,
+      "name": "8-S",
+      "value": 8,
+      "ace": false
+    },
+    {
+      "id": 27,
+      "name": "8-D",
+      "value": 8,
+      "ace": false
+    },
+    {
+      "id": 28,
+      "name": "8-H",
+      "value": 8,
+      "ace": false
+    },
+    {
+      "id": 29,
+      "name": "9-C",
+      "value": 9,
+      "ace": false
+    },
+    {
+      "id": 30,
+      "name": "9-S",
+      "value": 9,
+      "ace": false
+    },
+    {
+      "id": 31,
+      "name": "9-D",
+      "value": 9,
+      "ace": false
+    },
+    {
+      "id": 32,
+      "name": "9-H",
+      "value": 9,
+      "ace": false
+    },
+    {
+      "id": 33,
+      "name": "10-C",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 34,
+      "name": "10-S",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 35,
+      "name": "10-D",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 36,
+      "name": "10-H",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 37,
+      "name": "J-C",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 38,
+      "name": "J-S",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 39,
+      "name": "J-D",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 40,
+      "name": "J-H",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 41,
+      "name": "Q-C",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 42,
+      "name": "Q-S",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 43,
+      "name": "Q-D",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 44,
+      "name": "Q-H",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 45,
+      "name": "K-C",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 46,
+      "name": "K-S",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 47,
+      "name": "K-D",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 48,
+      "name": "K-H",
+      "value": 10,
+      "ace": false
+    },
+    {
+      "id": 49,
+      "name": "A-C",
+      "value": 11,
+      "ace": true
+    },
+    {
+      "id": 50,
+      "name": "A-S",
+      "value": 11,
+      "ace": true
+    },
+    {
+      "id": 51,
+      "name": "A-D",
+      "value": 11,
+      "ace": true
+    },
+    {
+      "id": 52,
+      "name": "A-H",
+      "value": 11,
+      "ace": true
+    }
+  ],
   "coinGames": [
     {
       "playerId": 1,
@@ -319,6 +633,16 @@
       "featured": false,
       "date": "2/10/2023",
       "id": 20
+    }
+  ],
+  "cardGames": [
+    {
+      "id": 1,
+      "playerId": 1,
+      "amountBet": 100,
+      "win": false,
+      "featured": false,
+      "date": "2/14/2023"
     }
   ]
 }
