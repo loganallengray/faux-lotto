@@ -47,6 +47,28 @@
     width: 70%;
 }
 
+.deck-header {
+    min-width: 400px;
+    text-align: center;
+    width: 80%;
+}
+
+.deck-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 400px;
+    width: 80%;
+}
+
+.card-container {
+    padding: 5px;
+}
+
+.card-container, .card-container img {
+    max-width: 150px;
+}
+
 #card-submit {
     min-width: 100px;
     width: 30%;
@@ -64,7 +86,9 @@
 #card-button-container {
     display: flex;
     justify-content: space-around;
-    width: 60%;
+    margin-top: 10px;
+    min-width: 400px;
+    width: 80%;
 }
 
 #card-submit:hover {
