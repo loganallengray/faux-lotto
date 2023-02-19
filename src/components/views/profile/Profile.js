@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { CardGameList } from "./CardGameList";
 import { CoinGameList } from "./CoinGameList";
 import { HorseGameList } from "./HorseGameList";
 import "./Profile.css"
@@ -6,8 +7,12 @@ import "./Profile.css"
 export const Profile = ({player, playerId}) => {
     const [coinGames, setCoinGames] = useState([])
     const [horseGames, setHorseGames] = useState([])
+    const [cardGames, setCardGames] = useState([])
+    const [playerDecks, setPlayerDecks] = useState([])
+    const [dealerDecks, setDealerDecks] = useState([])
     const [showCoinGames, setShowCoinGames] = useState(true)
     const [showHorseGames, setShowHorseGames] = useState(false)
+    const [showCardGames, setShowCardGames] = useState(false)
     const [selectedGameType, setSelectedGameType] = useState(1)
 
     useEffect(() => {
@@ -21,15 +26,36 @@ export const Profile = ({player, playerId}) => {
             .then((data) => {
                 setHorseGames(data)
             })
+        fetch(`http://localhost:8088/cardGames?playerId=${playerId}&_sort=id&_order=desc`)
+            .then((res) => res.json())
+            .then((data) => {
+                setCardGames(data)
+            })
+        fetch(`http://localhost:8088/playerDecks?_expand=card`)
+            .then((res) => res.json())
+            .then((data) => {
+                setPlayerDecks(data)
+            })
+        fetch(`http://localhost:8088/dealerDecks?_expand=card`)
+            .then((res) => res.json())
+            .then((data) => {
+                setDealerDecks(data)
+            })
     }, []);
 
     useEffect(() => {
         if (selectedGameType === 1) {
             setShowCoinGames(true)
             setShowHorseGames(false)
+            setShowCardGames(false)
         } else if (selectedGameType === 2) {
             setShowCoinGames(false)
             setShowHorseGames(true)
+            setShowCardGames(false)
+        } else {
+            setShowCoinGames(false)
+            setShowHorseGames(false)
+            setShowCardGames(true)
         }
     }, [selectedGameType]);
 
@@ -52,15 +78,15 @@ export const Profile = ({player, playerId}) => {
             <div id="game-space"></div>
         </div>
         <section id="game-info">
+            <select 
+                id="game--selector"
+                onChange={(event) => setSelectedGameType(parseInt(event.target.value))}>
+                <option value="1">Coin Games</option>
+                <option value="2">Horse Races</option>
+                <option value="3">Blackjack Games</option>
+            </select>
             {showCoinGames ? (
                 <article>
-                    <button
-                        className="game--selector"
-                        onClick={() => {
-                            setSelectedGameType(2)
-                        }}
-                    >Show Horse Races</button>
-                    <h3>Coin Games</h3>
                     <ul>
                         {coinGames.map((coinGame) => <CoinGameList coinGame={coinGame} setCoinGames={setCoinGames} key={coinGame.id} />)}
                     </ul>
@@ -68,15 +94,15 @@ export const Profile = ({player, playerId}) => {
             ) : ""}
             {showHorseGames ? (
                 <article>
-                    <button
-                        className="game--selector"
-                        onClick={() => {
-                            setSelectedGameType(1)
-                        }}
-                    >Show Coin Games</button>
-                    <h3>Horse Races</h3>
                     <ul>
                         {horseGames.map((horseGame) => <HorseGameList horseGame={horseGame} setHorseGames={setHorseGames} key={horseGame.id} />)}
+                    </ul>
+                </article>
+            ) : ""}
+            {showCardGames ? (
+                <article>
+                    <ul>
+                        {cardGames.map((cardGame) => <CardGameList cardGame={cardGame} setCardGames={setCardGames} dealerDecks={dealerDecks} playerDecks={playerDecks} key={cardGame.id} />)}
                     </ul>
                 </article>
             ) : ""}
