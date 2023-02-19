@@ -17,7 +17,7 @@
     background-color: #dde0e3;
     border-left: solid 3px #ccc;
     height: calc(100vh - 63px);
-    margin: -7px 0px 0px 0px;
+    margin: -10px 0px 0px 0px;
     min-width: 200px;
     overflow: scroll;
     right: 0%;
@@ -28,7 +28,7 @@
 }
 
 #game-space {
-    min-width: 250px;
+    min-width: 270px;
     width: 75%;
 }
 
@@ -55,7 +55,7 @@
     padding: 10px;
 }
 
-.player--game h4 {
+.player--game h4, .player--game h5 {
     margin: 5px 0px;
     text-align: center;
 }
@@ -68,15 +68,31 @@
     background-color: #f9c6cb;
 }
 
+/* Card Game */
+
+.summ-deck-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.summ-card-container {
+    margin: 3px;
+}
+
+.summ-card-container, .summ-card-container img {
+    max-width: 70px;
+}
+
 /* select game type button */
-.game--selector {
+#game--selector {
     background-color: #f8f8f9;
     color: #333;
     margin-bottom: 10px;
     width: 100%;
 }
 
-.game--selector:hover {
+#game--selector:hover {
     background-color: #fff;
     color: #000;
     margin-bottom: 10px;

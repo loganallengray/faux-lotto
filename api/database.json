@@ -3,17 +3,17 @@
     {
       "name": "John Smith",
       "email": "yesthatsreallymyname@coldmail.com",
-      "currency": 12000,
-      "wins": 47,
-      "losses": 67,
+      "currency": 1998674.6666666667,
+      "wins": 53,
+      "losses": 78,
       "id": 1
     },
     {
       "name": "Jane Doe",
       "email": "mysterywoman@coldmail.com",
-      "currency": 1488.5,
+      "currency": 1486.5,
       "wins": 20,
-      "losses": 21,
+      "losses": 22,
       "id": 2
     },
     {
@@ -418,7 +418,7 @@
       "choice": "Tails",
       "outcome": "Tails",
       "win": true,
-      "featured": false,
+      "featured": true,
       "date": "2/8/2023",
       "id": 2
     },
@@ -633,6 +633,136 @@
       "featured": false,
       "date": "2/10/2023",
       "id": 20
+    },
+    {
+      "playerId": 1,
+      "horseId": 2,
+      "amountBet": 1,
+      "newAmount": 0,
+      "win": false,
+      "featured": false,
+      "date": "2/19/2023",
+      "id": 21
+    },
+    {
+      "playerId": 1,
+      "horseId": 2,
+      "amountBet": 1,
+      "newAmount": 0,
+      "win": false,
+      "featured": false,
+      "date": "2/19/2023",
+      "id": 22
+    },
+    {
+      "playerId": 1,
+      "horseId": 2,
+      "amountBet": 1,
+      "newAmount": 0,
+      "win": false,
+      "featured": false,
+      "date": "2/19/2023",
+      "id": 23
+    },
+    {
+      "playerId": 1,
+      "horseId": 2,
+      "amountBet": 1,
+      "newAmount": 11,
+      "win": true,
+      "featured": false,
+      "date": "2/19/2023",
+      "id": 24
+    },
+    {
+      "playerId": 1,
+      "horseId": 1,
+      "amountBet": 500,
+      "newAmount": 666.6666666666666,
+      "win": true,
+      "featured": false,
+      "date": "2/19/2023",
+      "id": 25
+    },
+    {
+      "playerId": 1,
+      "horseId": 3,
+      "amountBet": 500,
+      "newAmount": 0,
+      "win": false,
+      "featured": false,
+      "date": "2/19/2023",
+      "id": 26
+    },
+    {
+      "playerId": 1,
+      "horseId": 3,
+      "amountBet": 500,
+      "newAmount": 0,
+      "win": false,
+      "featured": false,
+      "date": "2/19/2023",
+      "id": 27
+    },
+    {
+      "playerId": 1,
+      "horseId": 3,
+      "amountBet": 500,
+      "newAmount": 0,
+      "win": false,
+      "featured": false,
+      "date": "2/19/2023",
+      "id": 28
+    },
+    {
+      "playerId": 1,
+      "horseId": 3,
+      "amountBet": 500,
+      "newAmount": 0,
+      "win": false,
+      "featured": false,
+      "date": "2/19/2023",
+      "id": 29
+    },
+    {
+      "playerId": 1,
+      "horseId": 3,
+      "amountBet": 500,
+      "newAmount": 0,
+      "win": false,
+      "featured": false,
+      "date": "2/19/2023",
+      "id": 30
+    },
+    {
+      "playerId": 1,
+      "horseId": 3,
+      "amountBet": 500,
+      "newAmount": 0,
+      "win": false,
+      "featured": false,
+      "date": "2/19/2023",
+      "id": 31
+    },
+    {
+      "playerId": 1,
+      "horseId": 3,
+      "amountBet": 500,
+      "newAmount": 0,
+      "win": false,
+      "featured": false,
+      "date": "2/19/2023",
+      "id": 32
+    },
+    {
+      "playerId": 1,
+      "horseId": 3,
+      "amountBet": 500,
+      "newAmount": 1500,
+      "win": true,
+      "featured": false,
+      "date": "2/19/2023",
+      "id": 33
     }
   ],
   "cardGames": [
@@ -649,9 +779,54 @@
       "amountBet": 2,
       "newAmount": 3,
       "win": true,
-      "featured": false,
+      "featured": true,
       "date": "2/18/2023",
       "id": 2
+    },
+    {
+      "playerId": 2,
+      "amountBet": 2,
+      "newAmount": 0,
+      "win": false,
+      "featured": true,
+      "date": "2/19/2023",
+      "id": 3
+    },
+    {
+      "playerId": 1,
+      "amountBet": 400,
+      "newAmount": 600,
+      "win": true,
+      "featured": false,
+      "date": "2/19/2023",
+      "id": 4
+    },
+    {
+      "playerId": 1,
+      "amountBet": 12600,
+      "newAmount": 18900,
+      "win": true,
+      "featured": false,
+      "date": "2/19/2023",
+      "id": 5
+    },
+    {
+      "playerId": 1,
+      "amountBet": 31500,
+      "newAmount": 0,
+      "win": false,
+      "featured": true,
+      "date": "2/19/2023",
+      "id": 6
+    },
+    {
+      "playerId": 1,
+      "amountBet": 800000,
+      "newAmount": 1200000,
+      "win": true,
+      "featured": true,
+      "date": "2/19/2023",
+      "id": 7
     }
   ],
   "playerDecks": [
@@ -674,6 +849,86 @@
       "cardGameId": 2,
       "cardId": 26,
       "id": 4
+    },
+    {
+      "cardGameId": 3,
+      "cardId": 39,
+      "id": 5
+    },
+    {
+      "cardGameId": 3,
+      "cardId": 10,
+      "id": 6
+    },
+    {
+      "cardGameId": 3,
+      "cardId": 4,
+      "id": 7
+    },
+    {
+      "cardGameId": 4,
+      "cardId": 11,
+      "id": 8
+    },
+    {
+      "cardGameId": 4,
+      "cardId": 4,
+      "id": 9
+    },
+    {
+      "cardGameId": 4,
+      "cardId": 39,
+      "id": 10
+    },
+    {
+      "cardGameId": 4,
+      "cardId": 1,
+      "id": 11
+    },
+    {
+      "cardGameId": 5,
+      "cardId": 28,
+      "id": 12
+    },
+    {
+      "cardGameId": 5,
+      "cardId": 15,
+      "id": 13
+    },
+    {
+      "cardGameId": 5,
+      "cardId": 19,
+      "id": 14
+    },
+    {
+      "cardGameId": 6,
+      "cardId": 24,
+      "id": 15
+    },
+    {
+      "cardGameId": 6,
+      "cardId": 7,
+      "id": 16
+    },
+    {
+      "cardGameId": 6,
+      "cardId": 35,
+      "id": 17
+    },
+    {
+      "cardGameId": 6,
+      "cardId": 9,
+      "id": 18
+    },
+    {
+      "cardGameId": 7,
+      "cardId": 25,
+      "id": 19
+    },
+    {
+      "cardGameId": 7,
+      "cardId": 31,
+      "id": 20
     }
   ],
   "dealerDecks": [
@@ -701,6 +956,71 @@
       "cardGameId": 2,
       "cardId": 48,
       "id": 5
+    },
+    {
+      "cardGameId": 3,
+      "cardId": 27,
+      "id": 6
+    },
+    {
+      "cardGameId": 3,
+      "cardId": 37,
+      "id": 7
+    },
+    {
+      "cardGameId": 4,
+      "cardId": 30,
+      "id": 8
+    },
+    {
+      "cardGameId": 4,
+      "cardId": 17,
+      "id": 9
+    },
+    {
+      "cardGameId": 4,
+      "cardId": 23,
+      "id": 10
+    },
+    {
+      "cardGameId": 5,
+      "cardId": 10,
+      "id": 11
+    },
+    {
+      "cardGameId": 5,
+      "cardId": 48,
+      "id": 12
+    },
+    {
+      "cardGameId": 5,
+      "cardId": 41,
+      "id": 13
+    },
+    {
+      "cardGameId": 6,
+      "cardId": 29,
+      "id": 14
+    },
+    {
+      "cardGameId": 6,
+      "cardId": 18,
+      "id": 15
+    },
+    {
+      "cardGameId": 7,
+      "cardId": 19,
+      "id": 16
+    },
+    {
+      "cardGameId": 7,
+      "cardId": 36,
+      "id": 17
+    },
+    {
+      "cardGameId": 7,
+      "cardId": 46,
+      "id": 18
     }
   ]
 }
