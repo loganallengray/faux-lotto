@@ -11,9 +11,9 @@
     {
       "name": "Jane Doe",
       "email": "mysterywoman@coldmail.com",
-      "currency": 601,
-      "wins": 18,
-      "losses": 14,
+      "currency": 1488.5,
+      "wins": 20,
+      "losses": 21,
       "id": 2
     },
     {
@@ -643,6 +643,64 @@
       "win": false,
       "featured": false,
       "date": "2/14/2023"
+    },
+    {
+      "playerId": 2,
+      "amountBet": 2,
+      "newAmount": 3,
+      "win": true,
+      "featured": false,
+      "date": "2/18/2023",
+      "id": 2
+    }
+  ],
+  "playerDecks": [
+    {
+      "id": 1,
+      "cardGameId": 1,
+      "cardId": 2
+    },
+    {
+      "id": 2,
+      "cardGameId": 1,
+      "cardId": 8
+    },
+    {
+      "cardGameId": 2,
+      "cardId": 51,
+      "id": 3
+    },
+    {
+      "cardGameId": 2,
+      "cardId": 26,
+      "id": 4
+    }
+  ],
+  "dealerDecks": [
+    {
+      "id": 1,
+      "cardGameId": 1,
+      "cardId": 8
+    },
+    {
+      "id": 2,
+      "cardGameId": 1,
+      "cardId": 2
+    },
+    {
+      "cardGameId": 2,
+      "cardId": 38,
+      "id": 3
+    },
+    {
+      "cardGameId": 2,
+      "cardId": 5,
+      "id": 4
+    },
+    {
+      "cardGameId": 2,
+      "cardId": 48,
+      "id": 5
     }
   ]
 }

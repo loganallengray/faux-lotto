@@ -22,7 +22,7 @@ export const CardGameRouting = ({gameProgress, player, userChoices, setUserChoic
     } else {
         return (
             <>
-                <CardHands gameProps={gameProps} />
+                <CardHands gameProps={gameProps} gameProgress={gameProgress} />
                 <CardResult result={result} />
                 <CardBet 
                         player={player} 

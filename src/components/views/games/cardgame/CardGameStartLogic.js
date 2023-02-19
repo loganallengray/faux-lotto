@@ -23,7 +23,7 @@ export const CardGameStartLogic = (gameProps, setGameProps, gameProgress) => {
     }
         
     const startGame = () => {
-        if (gameProps.deck.length < 10) {
+        if (gameProps.deck.length < 13) {
             fetch(`http://localhost:8088/cards`)
             .then((res) => res.json())
             .then((data) => {
