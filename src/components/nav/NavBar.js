@@ -9,10 +9,13 @@ export const NavBar = () => {
             <ul className="navbar">
                 <li 
                     id="navbar__home__container"
-                    className="navbar__item navbar__home active">
+                    className="navbar__item active">
                     <div
-                        onClick={() => {navigate("/")}}
-                    ><p id="navbar__home">Faux Lotto</p></div>
+                        id="logo--image--container"
+                        onClick={() => {navigate("/")}}>
+                        <img id="faux-logo" src="poker chip.png" />
+                        <p id="navbar__home">Faux Lotto</p>
+                    </div>
                 </li>
                 <li className="navbar__item active">
                     <Link className="navbar__link" to="/games"><p>Games</p></Link>
