@@ -1,72 +1,31 @@
-# Getting Started with Create React App
+# Faux Lotto
 
-test
+## Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+What is Faux Lotto? It's a gambling site that doesn't use real money, so there is zero risk, but no reward either. 
 
-## Available Scripts
+## Purpose and Motivation
 
-In the project directory, you can run:
+I wanted to give people who physically couldn't or didn't want to gamble with real money a site where they could play a few gambling games.  
 
-### `npm start`
+## How to Use
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Once downloaded, you can log in to an already existing account or register a new one.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+If you've just made your account, you will have zero funds. To add funds, go to the Funds page and fill out the form to add fake currency to your account.
 
-### `npm test`
+After that, you can go to the Games page and start gambling. You can choose from three games, Coin Flip, Horse Race, and Blackjack. To play each you specify an amount, click the green button, and the game will start.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Once you've played a few games, you can go to your Profile to view all of your previously played games, and some statistics tied to your account.
 
-### `npm run build`
+## Development
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Faux Lotto was developed with React. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to Install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Download the repository, serve the database.json file ("json-server -p 8088 database.json"), and then serve the entire folder ("npm start").
 
-### `npm run eject`
+## Difficulties
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Programming the games was definitely the biggest challenge of this project. I'm proud that I got them to work properly, though.
