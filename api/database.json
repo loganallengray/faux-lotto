@@ -3,8 +3,8 @@
     {
       "name": "John Smith",
       "email": "yesthatsreallymyname@coldmail.com",
-      "currency": 1998674.6666666667,
-      "wins": 53,
+      "currency": 1998679.6666666667,
+      "wins": 54,
       "losses": 78,
       "id": 1
     },
@@ -511,6 +511,16 @@
       "featured": false,
       "date": "2/10/2023",
       "id": 11
+    },
+    {
+      "playerId": 1,
+      "amountBet": 5,
+      "choice": "Tails",
+      "outcome": "Tails",
+      "win": true,
+      "featured": false,
+      "date": "3/20/2023",
+      "id": 12
     }
   ],
   "horseGames": [
