@@ -38,10 +38,13 @@ $ cd api
 $ json-server -p 8088 database.json
 ```
 
-Open another terminal window/tab and run "npm start" in the faux-lotto directory.
+Open another terminal window/tab and install the npm packages in the faux-lotto directory, then run "npm start".
 
 ```bash
 # Navigate to faux-lotto folder
+
+# NPM Install
+$ npm install
 
 # Start the app
 $ npm start
